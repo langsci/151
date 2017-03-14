@@ -1,0 +1,949 @@
+\documentclass[output=paper,
+modfonts
+]{LSP/langsci}
+
+
+
+
+\title{Phonological exceptionality is localized to phonological elements: the argument from learnability and Yidiny word-final deletion}
+
+\author{%
+Erich R. Round\affiliation{University of Queensland}
+}
+
+\abstract{
+\citet{anderson2008} emphasizes that the space of possible grammars must be constrained by limits not only on what is cognitively representable, but on what is learnable. Focusing on word final deletion in Yidiny \citep{dixon1977a}, I show that the learning of exceptional phonological patterns is improved if we assume that Prince \& Tesar's \citeyearpar{princetesar2004} Biased Constraint Demotion (BCD) with Constraint Cloning \citep{pater2009r} is subject to a Morphological Coherence Principle (MCP), which operationalizes morphological analytic bias \citep{moreton2008r} during phonological learning. The existence of the MCP allows the initial state of \textsc{Con} to be simplified, and thus shifts explanatory weight away from the representation of the grammar \textup{per se}, and towards the learning device. 
+
+I then argue that the theory of exceptionality must be phonological and diacritic. Specifically, I show that co-indexation between lexical forms and lexically indexed constraints must be via indices not on morphs but on individual phonological elements. Relative to indices on phonological elements, indices on morphs add computational cost for no benefit during constraint evaluation and learning; and a theory without indices on phonological elements is empirically insufficient. On the other hand, approaches which represent exceptionality by purely phonological means (e.g. \citealt{zoll1996}) are ill-suited to efficient learning. Concerns that a phonologically-indexed analysis would overgenerate \citep{gouskova2012} are unfounded under realistic assumptions about the learner.
+}
+
+\begin{document}
+\maketitle
+
+\section[Exceptionality]{Exceptionality}
+
+What is the nature of representations which are passed from the morphology to the phonology? \citet{anderson1992} demonstrates that the processes that create those representations can be elaborate and complex. Operations that act upon morphological forms, to realize units of morphologically-relevant meaning, involve not only the concatenation of formatives, but also selection among alternatives and non-concatenative modifications to intermediate representations (see also \citealt{anderson2015,anderson2016,andersontoappearar}). However, what of the final result, which comprises some number of morphs that must then be interpreted phonologically? A constant concern of generative phonology since its inception has been to account adequately for patterned phonological exceptionality, the phenomenon in which segments in a restricted class of morphs exhibit phonologically distinctive behavior as triggers, targets or blockers of alternations, or as participants in exceptional featural, phonotactic or prosodic surface structures. For example, in Yidiny \citep{dixon1977a,dixon1977b} vowels delete word-finally, if that deletion would prevent the word from surfacing with an unfooted syllable. This is seen in the root \textit{gaɟara-} `possum' in (1a) and the suffix \textit{-ɲa} \textsc{accusative} in (1b), where feet are marked by parentheses. However, in a restricted set of morphs the final vowel behaves exceptionally, resisting deletion, as in the root \textit{guɟara-} `broom' (2a) and the suffix \textit{-na} \textsc{purposive} (2b).
+
+\ea
+\begin{tabular}[t]{@{}lllll}
+a. & `possum.\textsc{abs}' & /gaɟara/ & → & (ga ɟa:r) \\
+b. & `father-\textsc{acc}' & /bimbi-ɲa/ & → & (bim bi:ɲ) \\
+\end{tabular}
+
+\ex
+\begin{tabular}[t]{@{}lllll}
+a. & `broom.\textsc{abs}' & /guɟara/ & → & (gu ɟa:) ra \\
+b. & `go-\textsc{purp}' & /gali-na/  & → & (ga li:) na\\
+\end{tabular}
+\z
+
+\noindent In order for the phonology to treat morph-specific, exceptional segments appropriately, it must receive from the morphology some kind of discriminating information which it can act upon. For much of the generative period it has been argued that this information is associated with morphs as a whole, and not with their individual phonological elements. Here I present an argument for the contrary view. The contribution, then, is to clarify the nature of one important aspect of the interaction between the morphological and phonological components of grammar. The principle line of evidence is learnability, namely the learnability of an optimality-theoretic grammar for phonological exceptionality. \citet{anderson2008} has emphasized that the space of possible human grammars must be constrained not only by limits on what is cognitively representable, but also on what is learnable. The crux of the argument here relies not on specifics, but ultimately on general properties of learnable grammars, and thus I would hope should remain valid even as specific theories undergo refinement as they move closer to answering Anderson's \citeyearpar{anderson2008} challenge.\footnote{A reviewer asks whether the machinery presented here is necessary if one assumes an exemplar-based model of phonology. I assume that learners do store rich, exemplar-like representations of linguistic experiences. However, natural language morphology in general has enough combinatorial complexity that reliance upon retrieved episodes will not be sufficient to reproduce the full range of creative behavior that humans display. Consequently some generative machinery is necessary, which performs not merely simple analogies and concatenations, but which can reproduce with precision the complex patterns generated by a realizational morphology such as Anderson's \citeyearpar{anderson1992}, and by a formal phonological grammar such as entertained here.}
+
+The chapter falls into two broad parts. In §2--§5 I discuss the processes and principles required to learn exceptionality. This leads to the positing of a Morphological Coherence Principle in §6, which operationalizes a morphological bias that ensures successful learning for certain cases. In §7--§9 I am concerned with the underlying theory of these processes and principles. I evaluate two broad approaches to phonological exceptionality: \textsc{phonological} approaches, which represent exceptionality as a property of individual segments \citep{bloomfield1939,kiparsky1982c,inkelas1995,zoll1996}, and \textsc{morphological} approaches which represent it as a property of morphs \citep{chomsky1964,chomskyhalle1968,zonneveld1978,pater2000r}. The result is an argument in favor of a \textsc{diacritic} \textsc{phonological} approach. On this account, exceptionality is represented at the level of individual phonological elements, not morphs; however the means of marking it is by diacritics which are visible to the phonology but not manipulable by it, in contradistinction to the \textsc{concrete phonological} approach, where the crucial representations are themselves phonological elements. As I show, the function of these `$\Phi $-indices' is essentially identical to `M-indices' which would mark morphs, only there is no assumption that all exponents of a morph \textit{m} be indexed identically. As we shall see, freedom from that assumption is both coherent theoretically and desirable, computationally and empirically. The discussion is illustrated throughout by the facts of word final deletion in Yidiny, to which we turn now in §2.
+
+\section[Word-final deletion in Yidiny]{Word-final deletion in Yidiny}
+\label{bkm:Ref335232760}\subsection{The phenomenon}
+
+Yidiny \citep{dixon1977a} belongs to the Yidinyic subgroup of the Pama-Nyungan language family. Traditionally it was spoken in the rainforest region southwest of Cairns, in North-eastern Australia. Most examples below are from Dixon's \citeyearpar{dixon1977a} detailed descriptive grammar; examples marked † are from Dixon's \citeyearpar{dixon1991} dictionary and texts. An inventory of underlying segments is in Table 1.
+
+\begin{table}
+\caption{Yidiny underlying segments, after \citet[32]{dixon1977a}.}
+\label{tab:1}
+\begin{tabular}{lcccc}
+\lsptoprule
+ & \textbf{Labial} & \textbf{Apical} & \textbf{Laminal} & \textbf{Dorsal}\\
+\midrule
+\textbf{Stop} & b & d & ɟ & g\\
+\textbf{Nasal} & m & n & ɲ & ŋ\\
+\textbf{Lateral, trill} & & l, r & & \\
+\textbf{Approximant} & w & ɻ & y & \\
+\midrule
+\textbf{Vowels} & \multicolumn{2}{l}{i, a, u, i:, a:, u:} & & \\
+\lspbottomrule
+\end{tabular}
+\end{table}
+
+Syllable shapes are tightly constrained. Onsets are obligatory and simple. Codas permit only sonorants other than /w/. Codas in word-final position are simple; word-internal codas also permit disegmental, continuant--nasal sequences. Morphologically, the language is almost entirely suffixing and largely agglutinative. Roots are minimally disyllabic and suffixes are maximally disyllabic \citep[35,90]{dixon1977a}. An online appendix\footnote{Available from \texttt{10.6084/m9.figshare.4579696}} discusses the morphological constituency of verbal inflection.
+
+Of Yidiny's phonological alternations, those to receive the greatest attention have been stress placement, vowel length and to a lesser extent, word-final deletion (\citealt{dixon1977a,dixon1977b,hayes1982r,hayes1985,kager1993,crowhurst1995,halle1995,hall2001,pruitt2010,hyde2012,bowern}, \textit{inter alia}). Yidiny's stress and length alternations in particular have featured in significant theoretical works on meter and prosody over the past four decades, and both are nontrivial topics in themselves. Word-final deletion, however, can be studied largely independently of them for reasons that follow. 
+
+Although stress placement in Yidiny has proven contentious \citep{pruitt2010,bowern}, word-final deletion is not sensitive to stress \textit{per se}, but rather only to the position of foot boundaries. These have been uncontroversial since their analysis by \citet{hayes1982r}: feet in Yidiny are disyllabic and left-aligned within the phonological word. 
+
+Many words with word-final deletion also exhibit vowel lengthening; however the phenomena show little to no mutual interaction. In a rule-based theory permitting simultaneous application \citep{anderson1974} lengthening and deletion would apply simultaneously; neither rule feeds or bleeds the other.\footnote{Deletion counter-bleeds lengthening, thus in a strictly serial analysis lengthening would precede word-final deletion (\citealt{dixon1977a,dixon1977b,hayes1985,crowhurst1995}).} See \citet{round} for an analysis of Yidiny lengthening.
+
+Word-final deletion is sensitive to foot placement, and foot placement is sensitive to phonological word boundaries. In Yidiny, phonological words commence at the left edge of each root and each disyllabic suffix \citep[88-98]{dixon1977a}.\footnote{Yidiny's only prefix, [ɟa:-] `in a direction' occupies its own phonological word \citep[98,162]{dixon1977a}.} Phonological words therefore begin with either a polysyllabic root or a disyllabic suffix and are followed by zero or more monosyllabic or entirely consonantal suffixes. Word-final deletion targets unfooted syllables and therefore only affects prosodic words which, \textit{modulo} deletion, would be at least trisyllabic. As a consequence, we are interested here in three kinds of phonological word: those comprised of bare roots of three or more syllables; those comprised of roots plus one or more monosyllabic suffixes; and those comprised of a disyllabic suffix plus one or more additional, monosyllabic suffixes. The third kind is rare,\footnote{For an illustration, see example (25).} and so discussion will focus on the first two. 
+
+Word-final deletion applies only if the word thereby avoids surfacing with an unfooted syllable. For example, the roots \textit{gindanu-} `moon' and \textit{gubuma-} `black pine' both contain three vowels, each of which is a potential syllabic nucleus at the surface. In (3a, 4a) they have undergone deletion of their final vowel to prevent it from surfacing in an unfooted syllable; compare (3b, 4b) where the roots are non-final in the word, and the final vowels surface. 
+
+\ea
+\begin{tabular}[t]{@{}lllll}
+a. & `moon\textsc{[abs]}' & /gindanu/  & → & (gin da:n) \\
+
+&&&& \ljudge{*}(gin da:) nu \\
+b. & `moon\textsc{-erg}' & /gindanu-ŋgu/  & → & (gin da) (nuŋ gu) \\
+\end{tabular}
+
+\ex 
+\begin{tabular}[t]{@{}lllll}
+a. &  `black pine[\textsc{abs}]' & /gubuma/  & → & (gu bu:m) \\
+&&&& \ljudge{*}(gu bu:) ma \\
+b. & `black pine\textsc{-purp}' & /gubuma-gu/  & → & (gu bu) (ma gu) \\
+\end{tabular}
+\z
+
+\noindent Final vowel deletion may also affect suffixes. In (5a,c, 6a), the vowels of the nominal comitative suffix \textit{-yi} and verbal comitative suffix -\textit{ŋa} have undergone deletion, thereby preventing the surfacing of an unfooted syllable. In (5b, 6b) the suffixes are non-final in the word, and the vowel surfaces. 
+
+\ea
+\begin{tabular}[t]{@{}lllll}
+a. &  `woman\textsc{-com}' & /buɲa-yi/  & → & (bu ɲa:y) \\
+&&&&\ljudge{*}(bu ɲa:) yi \\
+b.  &`woman-\textsc{com-erg'} & /buɲa-yi-ŋgu/  & → & (bu ɲa) (yiŋ gu) \\
+c.  &`black bream-\textsc{com}' & /gulugulu-yi/  & → & (gu lu) (gu lu:y) \\
+ & & & & \ljudge{*}(gu lu) (gu lu:) yi\\
+\end{tabular}
+
+\ex
+\begin{tabular}[t]{@{}lllll}
+a. & `come\textsc{-com[imp]}' & /gada-ŋa/  & → & (ga da:ŋ) \\
+&&&& \ljudge{*}(ga da:) ŋa\\
+b. & `come-\textsc{com-pst}' & /gada-ɲa-lɲu/  & → & (ga da:) (ŋal ɲu) \\
+\end{tabular}
+\z
+
+
+Word-final deletion interacts with restrictions on word-final consonants, and the interaction plays out differently in roots versus suffixes. In roots, deletion will fail to apply if the result would be an illicit word-final coda, containing either a stop or /w/ (7) or a cluster (8). One conceivable alternative, to also delete the consonant, is not attested in roots (7, 8).\footnote{Neither Dixon's grammar \citeyearpar{dixon1977a} nor dictionary (\citealt{dixon1991}, which cites underlying forms) records a surface form for the roots in 7c and 7d, or for roots illustrating the same pre-final consonant or comparable consonant clusters. However, \citet[57--58]{dixon1977a} specifically reports that the roots \textit{balawa}- and \textit{gindalba}- do not undergo deletion; the surface forms provided here are what we would expect if this is so.}
+
+\ea
+\begin{tabular}[t]{@{}lllll}
+a.  & `man[\textsc{abs}]' & /waguɟa/  & → & (wa gu:) ɟa \\
+&&&& \ljudge{*}(wa guɟ)\\
+&&&& \ljudge{*}(wa gu:) \\
+
+b. & `dog\textsc{[abs]}' & /gudaga/  & → & (gu da:) ga \\
+&&&& \ljudge{*}(gu da:g)\\
+&&&& \ljudge{*}(gu da:) \\
+
+c. & `sugar ant[\textsc{abs}]'  & /balawa/  & → & (ba la:) wa \\
+&&&& \ljudge{*}(ba la:w) \\
+&&&& \ljudge{*}(ba la:) \\
+
+d.  & `place name[\textsc{abs}]' & /ŋalumba/  & → & (ŋa lu:m) ba \\
+&&&& \ljudge{*}(ŋa lu:mb)\\
+&&&& \ljudge{*}(ŋa lu:m) \\
+\end{tabular}
+
+\ex
+\begin{tabular}[t]{@{}llll}
+`warn[\textsc{imp}]' & /binarŋa/  & → & (bi na:r) ŋa \\
+&&& \ljudge{*}(bi na:rŋ)\\
+&&& \ljudge{*}(bi na:r) \\
+\end{tabular}
+\z
+
+\noindent In contrast, deletion in suffixes applies not only to the final vowel, but also to a single consonant that precedes it, if that consonant would be illicit word-finally, as in (9). This form of CV deletion respects phonotactic constraints while also avoiding unfooted syllables.\footnote{The `dative subordinate' is marked by what \citet[26]{round2013} has called `compound suffixation', comprising two monosyllabic suffixal morphs, /-lɲu; -nda/. That these are not a single, disyllabic suffix is evident in the fact that they fail to be parsed into a their own phonological word, separate from the root.}
+
+\ea 
+\begin{tabular}[t]{@{}lllll}
+a. & `grey possum-\textsc{erg'} & /margu-ŋgu/ & → & (mar gu:ŋ) \\
+b. & `see-\textsc{pst'} & /wawa-lɲu/  & → & (wa wa:l) \\
+c. & `warn-\textsc{dat.sub'} & /binarŋa-lɲu-nda/  & →  & (bi nar) (ŋal ɲu:n) \\
+\end{tabular}
+\z
+
+\noindent However, word-final deletion never deletes the initial segment of a suffix (and consequently, it will never delete an entire suffix), as illustrated in (10). 
+
+\ea
+\begin{tabular}[t]{@{}lllll}
+ a.& `woman-\textsc{set}' & /buɲa-ba/  & → & (bu ɲa:) ba\\
+ &&&& \ljudge{*}(buɲ ba) \\
+ b. &`bandicoot-\textsc{gen}' & /guygal-ni/  & → & (guy ga:l) ni \\
+ &&&& \ljudge{*}(guy ga:ln)\\
+ &&&& \ljudge{*}(guy ga:l)\\
+ \end{tabular}
+ \z
+ 
+\noindent Deletions do not occur word internally (11a,b), nor do word-final, licit codas delete (11b). All Yidiny roots and suffixes that are consonant-final end underlyingly with licit coda consonants, so no morph undergoes spontaneous deletion of an underlyingly-final consonant (11c).
+
+\ea 
+\begin{tabular}[t]{@{}lllll}
+a. & `woman-\textsc{set}' & /buɲa-ba/  & → & (bu ɲa:) ba \\
+&&&& \ljudge{*}(buɲ ba) \\
+b.$^{†}$ & `name[\textsc{abs}]' & /bagiram/  & → & (ba gi:) ram \\
+&&&& \ljudge{*}(ba gi:rm)\\
+&&&& \ljudge{*}(ba gi:r)\\
+c. & & \ljudge{*}/bagirag/  & → & \ljudge{*}(ba gi:r)\\
+\end{tabular}
+\z
+
+\noindent To summarize, word-final deletion applies only so as to avoid the surfacing of unfooted syllables. It may delete the final vowel from a root and the final (C)V sequence from a suffix, but will not delete a suffix-initial segment. Deletion is blocked (in roots) or expanded (in suffixes, from V deletion to CV deletion) in order to obey phonotactic restrictions on word-final codas. These are the regular conditions under which word-final deletion occurs.
+
+In addition to its regular application, Yidiny contains roots and suffixes which are exceptional non-undergoers of word-final deletion. In (13), the non-undergoer roots \textit{mulari-}, \textit{guɟara-, ɟudulu-, baŋgamu-} all resist word-final deletion despite their pre-final consonant being permissible as a coda, and despite the fact that the consequence is an unfooted, word-final syllable.
+
+\ea\begin{tabular}[t]{@{}lllll}
+a. & ‘initiated man[\textsc{abs}]’ & /mulari/ & → & (mu la:) ri \\
+&&&& \ljudge{*}(mu la:r) \\
+b. & ‘broom[\textsc{abs}]’ & /guɟara/ & → & (gu ɟa:) ra \\
+&&&& \ljudge{*}(gu ɟa:r) \\
+c. & ‘brown pigeon[\textsc{abs}]’ &  /ɟudulu/ & → & (ɟu du:) lu \\
+&&&& \ljudge{*}(ɟu du:l)\\
+d. & ‘potato[\textsc{abs}]’ & /baŋgamu/ & → & (baŋ ga:) mu \\
+&&&& \ljudge{*}(baŋ ga:m)\\
+\end{tabular}
+\z
+
+\noindent \citet[59]{dixon1977a} reports 115 trisyllabic roots whose phonotactic shape would, under regular conditions, expose them to word-final deletion. Of these, 34, or around 30\%, are exceptional non-undergoers. The distinction is idiosyncratic; neither \citet[58]{dixon1977a} nor subsequent researchers have found any phonological, semantic or grammatical factor that categorically determines whether a root will be a non-undergoer.\footnote{Historically speaking, borrowed forms may account for many of these items (Barry Alpher p.c.); synchronically, however, their motivation is opaque.}
+
+Suffixes also may be exceptional non-undergoers. In (17) the non-undergoer suffixes -\textit{nda}, -\textit{lɟi} and -\textit{na} resist word-final deletion and allow an unfooted syllable to surface. Avoidance of regular, word-final CV deletion is seen in (13a,b) and V deletion in (13c).
+
+\ea\begin{tabular}[t]{@{}lllll}
+a. &`grey possum\textsc{-dat}' & margu-nda  & → &  (mar gu:n) da \\
+&&&& \ljudge{*}(mar gu:n) \\
+b. &`see-\textsc{lest[abs]}' & wawa-lɟi & → & (wa wa:l) ɟi \\
+&&&& \ljudge{*}(wa wa:l) \\
+c. &`go-\textsc{purp}' & gali-na & → & (ga li:) na \\
+&&&& \ljudge{*}(ga li:n) \\
+\end{tabular}
+\z
+
+\noindent Tables 2 and 3 list all suffixal allomorphs in Yidiny which, on phonotactic grounds, could plausibly delete.\footnote{Such suffixes must be vowel-final and monosyllabic. If just the final vowel is to delete, then it must leave behind a single, licit-coda consonant in word final position. This will require the suffix to be -CV, and be preceded by a vowel, not a consonant. Alternatively, if the final CV is to delete, then the suffix must be -CCV, since suffix-initial segments do not delete, and it too must attach to a vowel-final stem. Data here is from a comprehensive search of \citet{dixon1977a}, in which relevant information can be found on pp.50--54, 151. `Emphatic' -\textit{ɲa} \citep[151]{dixon1977a} is excluded. It behaves as a phonological clitic that occupies a distinct phonological word, and does not undergo final deletion.}  Regular undergoers are in Table 2 and non-undergoers in Table 3.\newpage
+
+\begin{table}
+\caption{Monosyllabic suffixes which undergo word-final deletion.}
+\begin{tabular}{llll}
+\lsptoprule
+\textbf{Function} & & \textbf{-CV} & \textbf{-CCV} \\
+\midrule
+Case &  \textsc{ergative}  & & {}-ŋgu\\
+ & \textsc{locative}  & -la & \\
+ &
+ \textsc{accusative}  & -ɲa & \\
+ & \textsc{comitative}  & -yi & \\
+ & \textsc{genitive}  &  -ni, -nu & \\
+ \midrule
+Verbal & \textsc{past} tense inflection & -ɲu & -lɲu, -ɻɲu\\
+ & \textsc{comitative} derivation & -ŋa & \\
+ & \textsc{dative subordinate} inflection & & -nda\protect\footnotemark{}\\
+ \lspbottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}
+\caption{Monosyllabic suffixes which escape word-final deletion.}
+\begin{tabular}{llll}
+\lsptoprule
+\textbf{Function} & & \textbf{-CV} & \textbf{-CCV} \\
+\midrule
+Case & \textsc{dative} &  & -nda \\
+\midrule
+ Verbal & \textsc{purposive} inflection & -na & -lna, -ɻna \\
+ & \textsc{lest} nominalizing derivation & & -nɟi, -lɟi, -ɻɟi\\ 
+ \lspbottomrule
+\end{tabular}
+\end{table}
+\footnotetext{The dative subordinate is marked by a string of two monosyllabic suffixes {}-\textit{lɲu}\textit{-nda}, cf.\ fn.7.}
+
+Exceptional non-undergoers, both roots and suffixes, only block the deletion of their own segments; the exceptionality does not spread to neighboring morphs. Accordingly in (14), the exceptional non-undergoer \textsc{lest} does not block deletion in the following, regular undergoer, \textsc{ergative} suffix. 
+
+\ea
+\begin{tabular}[t]{@{}llll}
+wiwi-:ɟi-nɟi-ŋgu &`give-\textsc{antip-lest-erg}' & → & (wi wi:) (ɟin ɟi:ŋ)\\
+&&& *(wi wi:) (ɟin ɟi:ŋ) gu  \\
+\end{tabular}
+\z 
+
+\noindent Likewise, the presence of a regular undergoer will not undo the blocking effect of an exceptional non-undergoer. In (15) the regular undergoer \textsc{comitative} does not undermine the blocking of deletion in the exceptional non-undergoer \textsc{purposive}, which follows it.
+
+\ea
+\begin{tabular}[t]{@{}llll}
+maɟinda-ŋa-lna & `walk up-\textsc{com-purp}'& → & (ma ɟin) (da ŋa:l) na\\
+&&& *(ma ɟin) (da ŋa:l) \\
+
+\end{tabular}
+\z
+
+It will be recalled that roots in Yidiny can undergo word-final deletion of vowels, but not of the consonants that precede them. More specifically, roots that end in CCV do not delete final CV, whereas some suffixes do, and nor does final CʹV delete from roots that end in VCʹV, where Cʹ is an impermissible coda. Two conceivable accounts for this may be distinguished. On one account, the grammar of Yidiny expressly prohibits root-final CV deletion. On the other, it happens just by chance that all CCV-final and VCʹV-final roots are exceptional non-undergoers. On the latter account, the grammar \textsc{would} enforce CV deletion from roots, if only the lexicon provided the right inputs; on the former account it would not. The level of empirical support for these hypotheses can be assessed statistically. Table 4 compares counts of CCV- and VCʹV-final roots and CCV-final suffixes which either do or do not delete. The distribution is strongly unbalanced, and we can reject with confidence the null hypothesis that it is due to chance ($\chi $\textsuperscript{2}\textsubscript{df=1} = 47.9 \textit{p} {\textless} 10\textsuperscript{{}-10}). Table 5 compares counts of roots that are CCV- and VCʹV-final with those that are VCV-final, i.e., where C is a permissible coda. Again, the counts are highly unbalanced and we reject the hypothesis that the absence of deletion in CCV- and VCʹV-finals is by chance ($\chi $\textsuperscript{2}\textsubscript{df=1} = 125.8. \textit{p} {\textless} 10\textsuperscript{{}-10}). The only empirically-supported conclusion is that the lack of consonant deletion in Yidiny roots is systematic, not due to chance. A satisfactory formal analysis should reflect this.\footnote{As a reviewer observes, there is an interesting historical background to be clarified here, and an account of it is planned. Naturally, the object of a synchronic analysis differs ontologically from that of a historical one. The two are complementary, but neither account would substitute for or serve as a counter-analysis to the other.}
+
+\begin{table}
+\caption{Deletion of coda-ilicit pre-final C in roots versus suffixes.}
+\begin{tabular}{lll}
+\lsptoprule
+ & \textbf{CCV- and VCʹV-final roots} & \textbf{CCV-final suffixes} \\
+ \midrule
+ No deletion & 116 & 6 \\
+ Deletion & 0 & 4 \\
+ \lspbottomrule
+ \end{tabular}
+ \end{table}
+ 
+ \begin{table}
+\caption{Deletion in roots with pre-final coda-illicit C versus prefixal coda-licit C.}
+\begin{tabular}{lll}
+\lsptoprule
+ & \textbf{CCV- and VCʹV-final roots} & \textbf{VCV-final suffixes} \\
+ \midrule
+ No deletion & 116 & 34 \\
+ Deletion & 0 & 81 \\
+ \lspbottomrule
+ \end{tabular}
+ \end{table}
+ 
+\subsection[Constraint rankings]{Constraint rankings}
+
+A briefly sketch now follows of how the facts above would be analysed in OT. Foot placement in Yidiny is due to \textsc{FootBinarity} \textsc{${\gg}$} \textsc{ParseSyllable} \textsc{${\gg}$} \\
+ \textsc{Align(Ft,L,PrWd,L)}  (\citealt{princesmolensky2004}[1993], \citealt{mccarthy1993}, \citealt{mccarthy1995r}). Of these, only \textsc{ParseSyllable (Prs)} will be of\textsc{} interest for our purposes; I assume that other prosodic constraints are satisfied optimally. Absolute restrictions against obstruents and /w/ in codas are due to \textsc{Sonorant/Coda} (e.g. \citealt{lombardi2002}) and *w/\textsc{Coda}; I assume these are unviolated.
+
+Regular word-final deletion in Yidiny can be analysed straightforwardly by ranking \textsc{Prs} \textsc{${\gg}$} \textsc{Maximality (Max,} \citealt{mccarthy1995r}). This causes deletion of final vowels in preference to the surfacing of unfooted syllables, but not if an illicit coda results.
+
+Segments may delete from the right edge of the word only, not the left or word-internally. High-ranking \textsc{Anchor-Left(}morph\textsc{)} penalizes deletion from the left edge of any morph and \textsc{Contig-IO(PrWd)} penalizes deletion internally (\citealt{mccarthy1995r}).
+
+Yidiny permits complex codas word-internally, but not word-finally. Ranking \textsc{Cntg} ${\gg}$ *\textsc{ComplexCoda} (\citealt{bernhardt1998}) accounts for this; ranking both above \textsc{Prs} accounts for the absence of deletion after pre-final clusters in roots and the defeat of candidates which delete only a final vowel from word-final CCV suffixes.
+
+Word-final deletion applies differently to roots and suffixes. Roots will not undergo consonant deletion, even if the consequence is an unfooted syllable. The ranking of undominated \textsc{Max-C/root} (\citealt{mccarthy1995r}) above \textsc{Prs} accounts for this. Suffixes do not violate \textsc{Max-C/rt} and consequently are free to undergo consonant deletion, however highly-ranked \textsc{Anc} penalizes the deletion of morph-initial segments. This accounts for the fact that a consonant may delete from a -CCV suffix but not from -CV.
+
+At this point, regular word-final deletion occurs whenever satisfaction of the markedness constraint \textsc{Prs} requires the violation of the lower-ranked faithfulness constraint \textsc{Max}. Deletion is blocked unexceptionally whenever \textsc{Prs} itself is violated in order to satisfy higher-ranking constraints, which are of two kinds: those which penalize marked codas, \textsc{son/Coda}, *w\textsc{/Coda,} *\textsc{Cplx}; and those which penalize deletion in specific morphological contexts, namely at left edges of morphs, \textsc{Anc}, and consonants in roots, \textsc{Max-C/rt}. We see that the driver of word-final deletion in Yidiny is the ranking of \textsc{Prs} ${\gg}$ \textsc{Max.} Deletion occurs when \textsc{Prs} is satisfied but \textsc{Max} is not. Regular blocking results when \textsc{Prs} must be violated, in which case \textsc{Max} can be satisfied.
+
+Exceptional non-undergoers avoid deletion. For them, \textsc{Max} is always satisfied, even at the expense of \textsc{Prs}. Consequently, while regular undergoers are subject to a  ranking of \textsc{Prs} ${\gg}$ \textsc{Max,} exceptional non-undergoers must be subject to \textsc{Max} ${\gg}$ \textsc{Prs.} In §4 I consider two approaches that will ensure this is the case, one morphological and one phonological. First though, a remark about constraint violations.
+
+\section[Relativized constraint violation]{Relativized constraint violation}
+
+I introduce here a simple expression for relating the violations of certain pairs of constraints, which will aid discussion in later sections.
+
+For any constraint C and candidate \textsc{cand,} there will be zero or more violations of C. Given the definition of C, those violations will be due to certain parts, or loci, in \textsc{cand}, either in the output of \textsc{cand} or in the correspondences between input and output elements (\citealt{mccarthy1995r}). We can define the set of \textsc{loci of violation,} V(C, \textsc{cand}), as the loci in \textsc{cand} which cause violations of C (\citealt{mccarthy2003}, \citealt{lubowicz2005}). Now, some pairs of constraints C\textsubscript{1}, C\textsubscript{2} are related such that for any \textsc{cand}, the loci of violation of C\textsubscript{2} are a subset of the loci of violation of C\textsubscript{1}. In many cases, the latter are precisely those members of the former which also contain some particular kind of phonological element. For example V(\textsc{Max}{}-C, \textsc{cand}) are those members of V(\textsc{Max}, \textsc{cand}) which also contain input consonants. In that case, we can express V(C\textsubscript{2}, \textsc{cand}) terms of the \textsc{intersection} of the set V(C\textsubscript{1}, \textsc{cand}) and some appropriately defined second set, that picks out loci containing the criterial elements. Let us define the set of `$\varphi $-loci', L\textsubscript{$\varphi $}(D($\varphi $), \textsc{cand}), as the set of loci in \textsc{cand} that contain a phonological element $\varphi $ of the kind denoted by predicate D($\varphi $). For example, V(\textsc{Max}{}-C, \textsc{cand}) can be defined in relative terms, as in (16), where the predicate \textsc{input\_consonant}($\varphi $) denotes input consonants. (For brevity I omit the `\textsc{cand}' from the expression for each set.)
+
+\ea 
+V(\textsc{Max-C})  =\textsubscript{def} V(\textsc{Max}) ${\cap}$ \ L\textsubscript{$\varphi $}(\textsc{input\_consonant}($\varphi $))
+\z
+
+This relativized method will be used below to define new constraints C\textsubscript{N} in terms of a reference constraint, C\textsubscript{R}, and a set of phonological elements which restrict the violations of C\textsubscript{N} relative to those of C\textsubscript{R}.
+
+\section[Preliminary analysis of word{}-final deletion]{Preliminary analysis of word-final deletion}
+\label{bkm:Ref335660381}\subsection[A morphological approach]{A morphological approach}
+
+We now consider an OT implementation of the morphological approach to Yidiny exceptionality, using lexically indexed constraints (\citealt{pater2000r,pater2006,pater2009r}). A lexically indexed constraint C\textit{\textsubscript{M}} behaves precisely like its unindexed counterpart, C, except that it can be violated only by structures which contain exponents of a specific set \textit{M} of morphs, each of which has been assigned a diacritic mark which I will term a \textsc{lexical M-index}, that co-indexes it to C\textit{\textsubscript{M}}. The definition can be expressed relatively as in (17), following a similar formulation by \citet{finley2010}.
+
+\ea 
+V(\textsc{C}\textsc{\textsubscript{M}}) =\textsubscript{def} V(C) ${\cap}$ L\textsubscript{$\varphi$}(\textit{m}${\in}$\textit{M} \& \textsc{Exp}($\varphi$, \textit{m})), \textit{where}:\\
+\textsc{M}\textsc{} is the set of morphs co-indexed to C\textit{\textsubscript{M}}.
+ 
+\textsc{Exp}($\varphi $\textit{, m}) states that element $\varphi$ is an exponent of morph \textit{m}
+
+\z
+
+If we now define two sets of Yidiny morphs, \textit{U} the set of regular undergoers of word-final deletion, and \textit{N} the set of exceptional non-undergoers, then either of the rankings in (18) will ensure that the correct sets of morphs is subject to the desired partial ranking of \textsc{Prs} and \textsc{Max.} 
+
+\ea
+	\ea \textsc{Prs}\textsc{\textsubscript{U}} ${\gg}$ \textsc{Max} \textsc{${\gg}$} \textsc{Prs}
+	\ex \textsc{Max}\textsc{\textsubscript{N}}\textsc{} \textsc{${\gg}$} \textsc{Prs} \textsc{${\gg}$} \textsc{Max}
+	\z
+\z
+
+In (18a), all phonological exponents of undergoer morphs will be subject to \textsc{Prs}\textsc{\textsubscript{U}} ${\gg}$ \textsc{Max}, and non-undergoers to \textsc{Max} \textsc{${\gg}$} \textsc{Prs.} In (18b), all phonological exponents of non-undergoer morphs will be subject to \textsc{Max}\textsc{\textsubscript{N}}\textsc{} \textsc{${\gg}$} \textsc{Prs}, and undergoers to \textsc{Prs} \textsc{${\gg}$} \textsc{Max.} For now I will use ranking (18a); the reason for this will become clear in §5.\footnote{Briefly, procedures for learning OT grammars improve in performance if they opt to rank markedness higher than faithfulness when given a choice. Consequently the ranking in (18a) will be learned in preference to (18b); see §5.}\textsuperscript{,}\footnote{An early proposal that only faithfulness constraints be indexable (\citealt{benua1997,ito1999,fukazawa1999}) has proven untenable (\citealt{pater2000r,pater2006,flack2007r,flack2007li,inkelas2007,gouskova2007,mahanta2008,jurgec2010}).} Examples in (19a--b) illustrate word-final deletion of regular undergoers which are indexed \textit{U}, the root \textit{malanu}{}-\subit{U} and suffix \textsc{ergative} \textit{{}-ŋgu}\subit{U}, while (19c--d) show the absence of deletion for exceptional non-undergoers \textit{mulari-} `initiated man' and \textsc{dative} \textit{nda}. 
+
+\ea
+\renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|ll||c|c|c|} \firsthline
+& & \textsc{Prs}-\subit{U} & \textsc{Max} & \textsc{Prs} \\
+\hline\hline a. & /malanu\subit{U}/ `right hand\textsc{[abs]'} & \tworow{W} & \tworow{L} & \tworow{W} \\
+ & (ma la:n) ${\succ}$ (ma la:) nu & & & \\
+ \hline b. & /margu-ŋgu\subit{U}/ `grey possum-\textsc{erg}' & \tworow{W} & \tworow{L} & \tworow{W} \\
+ & (mar gu:ŋ) ${\succ}$ (mar gu:ŋ) gu  & & & \\
+ \hline c. & /mulari/ `initiated man\textsc{[abs]'}  & & \tworow{W} & \tworow{L} \\
+ &(mu la:) ri ${\succ}$ (mu la:r) & & & \\
+ \hline d. & /margu-nda/ `grey possum\textsc{-dat'} & & \tworow{W} & \tworow{L} \\
+ & (mar gu:n) da ${\succ}$ (mar gu:n) & & & \\
+ \hline e. & /maɟinda-ŋa\subit{U}-lna/ `walk up-\textsc{com-purp'} & & \tworow{W} & \tworow{L} \\
+& (ma ɟin) (da ŋa:l) na ${\succ}$ (ma ɟin) (da ŋa:l)  & & & \\
+\hline
+\end{tabular}}
+\renewcommand*\arraystretch{1}
+ \z
+
+Example (19e) illustrates the fact that violations of \textsc{Prs}\textsc{\textsubscript{U}}\textsc{} require not merely the presence of a \textit{U}{}-indexed morph in the word, but a locus of violation which contains a phonological exponent of a \textit{U}{}-indexed morph (17). Namely, the final syllable of (19e), \textit{na}, is unfooted. However since that syllable contains no phonological exponent of a \textit{U}{}-indexed morph, no violation of \textsc{Prs}$_{U}$ results. This is true despite the presence of a \textit{U}-indexed morph elsewhere in the word.
+
+\subsection[A phonological approach]{A phonological approach}
+\label{bkm:Ref335239717}
+The phonological approach correlates the (un)exceptionality of a segment with representational properties of the segment itself. Implementations differ as to which property is used. \citet{zoll1996} analyses segments which resist deletion as having root nodes in their input, whereas segments that delete more readily lack root nodes, and are termed \textsc{subsegments}. Under these assumptions, a ranking \textsc{Max(Seg)} \textsc{${\gg}$} \textsc{Prs} \textsc{${\gg}$} \textsc{\ Max(Subseg)} ensures that segments with input root nodes are subjected to \textsc{Max(Seg)} \textsc{${\gg}$} \textsc{Prs,} while those without are subjected to \textsc{Prs} ${\gg}$ \textsc{Max(Subseg)}.\footnote{Assuming undominated \textsc{*Float (}\citealt{myers1997}\textsc{),} which prohibits surface subsegments, and low-ranked \textsc{Dep(Root) (}\citealt{zoll2001})\textsc{.}}  Examples are in (20), where segments without root nodes are underlined.
+
+\ea
+\renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|ll||c|c|c|}
+\firsthline
+& & \textsc{Max(Seg)} & \textsc{Prs} & \textsc{Max(Subseg)} \\
+\hline
+\hline a. & /malan\underline{u}/ & & \tworow{W} & \tworow{L} \\
+ & (ma la:n) ${\succ}$ (mu la:) nu & & & \\
+ \hline b. & /marguŋ\underline{\smash{gu}}/ & & \tworow{W} & \tworow{L} \\
+& (mar gu:ŋ) ${\succ}$ (mar guŋ) gu & & & \\
+\hline c. & /mulari/& \tworow{W} & \tworow{L} & \tworow{W} \\ 
+& (mu la:) ri ${\succ}$ (mu la:r) & & & \\
+\hline d. & /margu-nda/& \tworow{W} & \tworow{L} & \tworow{W} \\ 
+& (mar gu:n) da ${\succ}$ (mar gu:n) & & & \\
+\hline
+\end{tabular}}\renewcommand*\arraystretch{1}
+\z
+
+I wish to draw a distinction now between two conceivable kinds of phonological analysis. A \textsc{concrete} phonological analysis represents exceptionality using regular phonological material, such a features, root nodes and prosodic units, or perhaps their absence. An \textsc{abstract} phonological analysis uses diacritic lexical indices, which I will term \textsc{lexical} $\Phi $\textsc{{}-indices}, on segments, much like the morphological analysis uses lexical M-indices on morphs. Some objections which have been raised to phonological analyses are specific to the concrete approach. These include doubts over whether sufficiently many concrete phonological contrasts would be available in languages with very many exceptional patterns \citep{gouskova2012}, and concerns over whether learners can choose between multiple, alternative concrete representations (\citealt{kiparsky1973r}, \citealt{pater2009r}). I will set these concrete-specific concerns aside for now, and instead assume an abstract phonological approach. I return to the concrete approach in §9, where I argue on independent grounds that it is poorly adapted to efficient learning.
+
+Accordingly, I will use lexical $\Phi $-indices\textit{ u} and\textit{ n} to index undergoer and non-undergoer segments respectively, and define $\Phi $-indexed constraints\textsc{,} C\textsubscript{$\Phi $}, in relative terms as in (21).
+
+\ea
+V(\textsc{C}\textsubscript{$\Phi $}) \ =\textsubscript{def} V(\textsc{C}) \ ${\cap}$ \ L\textsubscript{$\varphi $}($\varphi $${\in}$$\Phi $), \textit{where:} \\
+$\Phi $\textsc{} is the set of phonological elements co-indexed to C\textsubscript{$\Phi $}.
+\z
+
+Returning to the phonological account of Yidiny exceptionality, a constraint ranking \textsc{Max-}\textit{n}\textsc{} \textsc{${\gg}$} \textsc{Prs} \textsc{${\gg}$} \textsc{Max}, or \textsc{Prs}\textsc{{}-}\textit{u}\textsc{} \textsc{${\gg}$} \textsc{Max} \textsc{${\gg}$} \textsc{Prs}, will be sufficient for our purposes. Tableau (22) shows examples using the latter ranking; \textit{u}{}-indexed segments are underlined.
+
+\ea
+\renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|ll||c|c|c|}
+\firsthline
+ & & \textsc{Prs}-\textit{u} & \textsc{Max} & \textsc{Prs} \\
+\hline
+\hline
+a. & (ma la:n) ${\succ}$ (mu la:) n\underline{u} & W & L&W\\
+\hline
+b. & (mar gu:ŋ) ${\succ}$ (mar guŋ) g\underline{u} & W & L &\\
+\hline
+c. & (mu la:) ri ${\succ}$ (mu la:r) & & W & L\\
+\hline
+d. & (mar gu:n) da ${\succ}$ (mar gu:n) & & W & L\\
+\hline
+e. & (ma ɟin) (da ŋ\underline{a:}l) na ${\succ}$ (ma ɟin) (da ŋ\underline{a:}l) & & W & L\\
+\hline
+\end{tabular}}\renewcommand*\arraystretch{1}
+\z
+
+A recent criticism of the phonological approach to exceptionality in OT is that it overgenerates \citep{gouskova2012}. Adapting Gouskova's arguments to the facts of Yidiny: if we adopt the ranking \textsc{Prs}\textsc{{}-}\textit{u}\textsc{} \textsc{${\gg}$} \textsc{Max} \textsc{${\gg}$} \textsc{Prs}, then it is no longer necessary to assign a high ranking to the morphologically-sensitive constraints \textsc{Anc} and \textsc{Max-C/Rt}, which penalize the deletion of morph-initial segments and root consonants. Rather, so long as all morph-initial segments and all root consonants lack a lexical \textit{u-}index,\textit{} then by virtue of the partial ranking \textsc{Max} \textsc{${\gg}$} \textsc{Prs}, they will resist deletion irrespective of the ranking of \textsc{Anc} and \textsc{Max-C/Rt}. By the same token however, if \textsc{Anc} and \textsc{Max-C/Rt} do receive a low ranking, then the analysis will fare poorly in the context of Richness of the Base (\citealt{princesmolensky2004}-1993]), since without high-ranked \textsc{Anc} and \textsc{Max-C/Rt} ensuring that morph-initial and root-consonant deletion is impossible, there is nothing to prevent segments from deleting in those positions if they are \textit{u}-indexed in the lexicon. For example, a root such as *\textit{binar}\textit{ŋa} could undergo CV deletion; a suffix *\textit{{}-}\textit{ni} could delete entirely; and *\textit{mu}\textit{lari} could delete from the left, thereby failing to capture the generalization that the absence of such forms is not an accident of the lexicon, but a systematic property of the grammar. This is perhaps the most significant apparent flaw of the phonological approach: it fails to rule out unattested patterns. This is in contrast to the morphological approach, which does rule them out. Or at least, so it would seem. In §5 I show that the true situation can be otherwise, once learning is taken into account. 
+
+\subsection[Alternatives]{Alternatives}
+
+Before proceeding to learning, I mention two OT alternatives to the analysis of exceptionality in Yidiny word-final deletion.
+
+Co-phonological approaches handle exceptionality as a type of cyclicity effect (\citealt{orgun1996}, \citealt{kiparsky2000r}, \citealt{inkelas2007}, \citealt{bermudez-Otero2016}). On each morphological cycle the result of a morphological operation is submitted to an appropriate phonological subgrammar, of which the language may possess many. Problematic for any cyclicity-based approach to exceptionality in Yidiny word-final deletion is that the Yidiny case is non-cyclic. Instead, undergoers are subject to deletion only if word-final. For example, in building both words in (23a,b) the first step would be to introduce the undergoer root \textit{bigunu-} `shield'. However at that point, the `deleting' subgrammar should only be applied if the root will end up word final, as in (23a) but not in (23b). 
+
+\ea
+\begin{tabular}[t]{@{}lllll}
+a.& `shield\textsc{[abs]}' & /bigunu/ & → & (bi gu:ŋ) \\
+b.& `shield-comit-\textsc{erg}' & /bigunu-yi-ŋgu/ & → & (bi gu) (nu yi:ŋ) \\
+& & & &  \ljudge{*}(bi gun) (yiŋ gu) \\
+\end{tabular}
+\z 
+
+Selecting the correct subgrammar in (23) thus requires information about the next step in the derivation. Crucially though, it requires forewarning, not only of whether or not there is more morphology to come, but also of what the \textsc{phonological} ramifications will be. This is because the relevant domain for word final-deletion in Yidiny is not the morphological word but the prosodic word. For example, in (24) the roots \textit{gaɟula-} `dirty' and \textit{gumaɻi}{}- `red' are followed by suffixes. Since the suffixes are monosyllabic, just one prosodic word results and the roots are non-final in their prosodic word. In (25) however, the roots are followed by the disyllabic \textsc{inchoative} suffix \textit{daga}, which commences a second prosodic word. As a consequence, the roots are final in their prosodic word and deletion is possible: the undergoer \textit{gaɟula-} deletes while the non-undergoer \textit{gumaɻi}- does not.
+
+\ea 
+\begin{tabular}[t]{@{}llll}
+a. &`dirty\textsc{-caus-pst'} &&\\
+& /gaɟula-ŋa-lɲu/ & → & [(ga ɟu) (la ŋa:l)\textsubscript{PWd}] \\
+b.& `red\textsc{{}-caus-pst'}&&\\
+& /gumaɻi-ŋa-lɲu/ & → & [(gu ma) (ɻi ŋa:l)\textsubscript{PWd}] \\
+\end{tabular}
+
+\ex
+\begin{tabular}[t]{@{}llll}
+a. &`dirty\textsc{-incho-pst}' &&\\
+& /gaɟula-daga-ɲu/ & → & [(ga ɟu:l)\textsubscript{PWd}] [(da ga:ɲ)\textsubscript{PWd}] \\
+b. &`red\textsc{-incho-pst}' &&\\
+& /gumaɻi-daga-ɲu/ & → & [(gu ma:) ɻi\textsubscript{ PWd}] [(da ga:ɲ)\textsubscript{PWd}] 
+\end{tabular}
+\z
+
+Any cyclic, look-ahead mechanism in Yidiny would therefore need to know how the word would be prosodically parsed on the \textsc{next} cycle, before it can decide whether or not to apply the `deleting' subgrammar on the current cycle. The look-ahead mechanism would therefore require the power of a subgrammar itself, yet if the theory were augmented in this manner, then other core mechanisms such as scope, or `bracket erasure', effects (\citealt{inkelas2007}) would be undermined. I conclude that co-phonology theory as it stands cannot analyse exceptionality in Yidiny word-final deletion.
+
+Another approach would be to lexically list two allomorphs for all undergoer morphs in the language, and have the grammar select them either optimally (\citealt{mester1994}, \citealt{kager1996}, \citealt{mascaro1996}, and \citealt{tranel1996a,tranel1996b}) or with some degree of stipulation \citep{bonet2007,round2013,wolf2015}. On this approach, `deletion' is apparent only, due in reality to the selection between two input allomorphs, one of which contains only a subset of the segments in the other (for a proposal not unlike this for Yidiny, see \citealt{hayes1997}). An example is shown in (26), where the grammar optimally selects between two input allomorphs of the undergoer root\textit{ bigunu-} `shield'.
+
+\ea 
+\renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|lrl||c:c|c|c|} \firsthline
+\multicolumn{3}{|c||}{\{/bigunu/, /bigun/\} `shield[\textsc{abs}]'} & \textsc{Anc} & \textsc{Max-C/rt} & \textsc{Prs} & \textsc{Max} \\
+\hline \hline a. & \hand & /bigun/ :: (bi gu:n) & & & & \\
+\hline b. & & /bigun/ :: (bi gu:) nu & & & $\ast$W & \\
+\hline c. & & /bigunu/ :: (bi gu:n) & & & & $\ast$W \\
+\hline d. & & /bigunu/ :: (bi gu:) nu & & & $\ast$W & \\
+\hline \end{tabular}} \renewcommand*\arraystretch{1}
+\z
+
+Two objections can be raised. First, because the approach simply lists alternant pairs, it misrepresents their resemblances as accidents, rather than relating them systematically. Relatedly, in the context of Richness of the Base, the analysis would allow the apparent deletion of morph-initial and -medial segments as well as root consonants, by leaving them out of an underlying allomorph, in a pair such as \{/bigunu/, /gunu/\}. Ranking \textsc{Anc} and \textsc{Max-C/root} highly would not ameliorate the problem, as shown in (27).
+
+\ea 
+\renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|lrl||c:c|c|c|} \firsthline
+&& \{/bigunu/, /gunu/\} & \textsc{Anc} & \textsc{Max-C/root} & \textsc{Prs} & \textsc{Max} \\
+\hline \hline a. & \ding{43} & /gunu/ :: (gu nu) & & & & \\
+\hline b. & & /bigunu/ :: (bi gu:) nu & & & $\ast$W & \\
+\hline \end{tabular}} \renewcommand*\arraystretch{1}
+\z
+
+Second, it is unclear how the analysis would prevent apparent deletion in word medial positions in the event that it is optimsing, as in (28), where the true output \textit{buɟala-ŋa:-lna} violates \textsc{Prs} while the more optimal false winner *\textit{buɟal-ŋa-lna} does not. The constraint \textsc{Cntg} will not prevent this occurring. 
+
+\ea 
+\renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|lrl||c|c|c|c|} \firsthline
+&& \begin{tabular}[t]{@{}l@{}}†\{/buɟala, buɟal/\}-ŋa-lna/\\ `finely ground-\textsc{cause-purp}'\end{tabular}& \rotcon{\textsc{Cntg}} & \rotcon{\textsc{*Cplx}} & \rotcon{\textsc{Prs}} & \rotcon{\textsc{Max}} \\
+% & &  & & & & \\
+\hline \hline a. & \hand & /buɟala-ŋa-lna/ :: (bu ɟa) (la ŋa:l) na & & & $\ast$L & \\
+\hline b. & $\ast$ & /buɟal-ŋa-lna/ :: (bu ɟal) (ŋal na) &&&& \\
+\hline
+\end{tabular}} \renewcommand*\arraystretch{1}
+\z
+
+I conclude that neither the co-phonological approach nor the allomorph-selection approach offers a viable alternative for Yidiny word-final deletion.
+
+\section[Learning exceptionality]{Learning exceptionality}
+\label{bkm:Ref335232762}\subsection[Biased Constraint Demotion]{Biased Constraint Demotion}
+\label{bkm:Ref335240320}
+I turn now to consider how exceptionality is, or isn't, learned. After introducing Prince and Tesar's \citeyearpar{princetesar2004} Biased Constraint Demotion (BCD) algorithm and adaptations of it for the learning of indexed constraints, I show that the learning of Yidiny word-final deletion does not proceed as one might expect from the discussion in §4. A solution is then offered in §6.
+
+Prince and Tesar's BCD is a computationally efficient algorithm for the learning of OT grammars. It builds upon Tesar's earlier Recursive Constraint Demotion (RCD) algorithm (\citealt{tesar1995}, \citealt{tesar2000}), deterministically learning a grammar, conditional on the data, by ranking constraints in a series of steps, or recursions. At the first step, one or more constraints is assigned to the highest-ranked \textsc{constraint} \textsc{stratum} in the grammar. A stratum is a set of constraints whose relative ranking against one another is indeterminate given the data, but whose ranking relative to constraints in other strata is significant. The act of assigning constraints to a stratum is termed \textsc{installation}. At each subsequent step, one or more additional constraints are installed in the next-highest stratum, and so on, until all constraints are ranked. The determination of which constraint(s) are installed next is based on evidence from winner--loser pairs (WLPs). For each WLP, any constraint yet to be installed will favor the winner in the pair, the loser, or neither. The full table of WLPs and constraints yet to be installed is termed the \textsc{support}. A fragment of a support is shown in (29). The relative order of constraints and WLPs in a support is inconsequential, though for ease of inspection I set out markedness constraints to the left of a vertical double line, and faithfulness to the right.
+
+\ea
+\renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|ll||c|c|c|c||c|c|c|} \firsthline
+& & \rotcon{\textsc{FtBin}} &
+\rotcon{\textsc{Prs}-\textit{u}} & 
+\rotcon{\textsc{Prs}} & 
+\rotcon{\textsc{*Cplx}} & 
+\rotcon{\textsc{Max}} & 
+\rotcon{\textsc{Cntg}} & 
+\rotcon{\textsc{Anc}} \\
+\hline 
+\hline
+a. & /margu-n\underline{i}/ &  & \tworow{W} & \tworow{W} &  & \tworow{L} &  & \\
+& (mar gu:n) ${\succ}$ (mar gu:) ni &&&&&&&\\
+\hline b. & /guygal-n\underline{i}/ & & \tworow{L} & \tworow{L} & & \tworow{W} & & \tworow{W} \\
+& (guy ga:l) ni ${\succ}$ (guy ga:l) &&&&&&& \\
+\hline c. &/guygal-n\underline{i}/ & & \tworow{L} & \tworow{L} & \tworow{W} & \tworow{W} & &  \\
+& (guy ga:l) ni ${\succ}$ (guy ga:ln) &&&&&&& \\
+\hline d. &/guygal-n\underline{i}/ & \tworow{W} & \tworow{L} & \tworow{L} & & & & \\
+&(guy ga:l) ni ${\succ}$ (guy ga:l ni) &&&&&&&\\
+\hline e. & /bulmba/ & & & \tworow{L} & \tworow{L} & \tworow{W} & \tworow{W} & \\
+& (bulm ba) ${\succ}$ (bul ba) &&&&&&&\\
+\hline \end{tabular}} \renewcommand*\arraystretch{1}
+\z
+
+In the original RCD algorithm, the sole criterion for installing a constraint was that it favor no losers. This is true of the constraints \textsc{FtBin, Cntg} and \textsc{Anc} in (29). When a constraint, C, is installed, all of the WLPs for which C favors the winner are removed from the support, since the constraint ranking has now accounted for them. In the RCD, all constraints meeting this criterion at any recursion are installed, and the result at the end of all recursions is a correct grammar for the data. Nevertheless, the grammars inferred by the RCD are not optimal \citep{princetesar2004}. The suboptimality relates to the subset problem \citep{baker1979r,angluin1980}, a general problem in algorithmic learning from positive evidence, namely that the system which results from learning will correctly assess as grammatical all attested items, but will fail to rule out certain systematically unattested items. This in turn relates to the notion of restrictiveness: a learning algorithm ought ideally to learn the most restrictive grammar consistent with the data. The RCD does not do this. In practice, meeting this desideratum is challenging for an efficient algorithm. However \citet{princetesar2004} demonstrate that good headway can be made by enhancing the RCD with a small set of biases, hence the name Biased Constraint Demotion, or BCD. The BCD differs from the RCD in two main respects. The first is the principle of \textsc{faithfulness delay}. According to this, at every recursion faithfulness constraints are not installed, even when they favor no losers, unless there are no other installable constraints. In (29) for example, the BCD would install the markedness constraint \textsc{FtBin} but not the faithfulness constraints \textsc{Cntg} and \textsc{Anc}. If we do this, and remove from (29) all the WLPs for which \textsc{FtBin} favors the winner, namely (29d), and remove \textsc{FtBin}, we have (30), in which only faithfulness constraints, \textsc{Cntg} and \textsc{Anc} favor no losers; under these conditions, faithfulness delay would permit the installation of \textsc{Cntg} and \textsc{Anc}. 
+
+\ea
+\renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|ll||c|c|c||c|c|c|} \hline
+& & 
+\rotcon{\textsc{Prs}-\textit{u}} & 
+\rotcon{\textsc{Prs}} & 
+\rotcon{\textsc{*Cplx}} & 
+\rotcon{\textsc{Max}} & 
+\rotcon{\textsc{Cntg}} & 
+\rotcon{\textsc{Anc}} \\
+\hline 
+\hline a. & /margu-n\underline{i}/  & \tworow{W} & \tworow{W} &  & \tworow{L} &  & \\
+ & (mar gu:n) ${\succ}$ (mar gu:) ni &&&&&&\\
+\hline b. & /guygal-n\underline{i}/  & \tworow{L} & \tworow{L} & & \tworow{W} & & \tworow{W} \\
+& (guy ga:l) ni ${\succ}$ (guy ga:l)  &&&&&& \\
+\hline c. &/guygal-n\underline{i}/   & \tworow{L} & \tworow{L} & \tworow{W} & \tworow{W} & &  \\
+& (guy ga:l) ni ${\succ}$ (guy ga:ln) &&&&&& \\
+\hline e. & /bulmba/  & & \tworow{L} & \tworow{L} & \tworow{W} & \tworow{W} & \\
+& (bulm ba) ${\succ}$ (bul ba) &&&&&& \\
+\hline \end{tabular}} \renewcommand*\arraystretch{1}
+\z
+
+However, there is a second principle to consider also. A principle of `freeing up markedness' states that when there is a choice between installing several faithfulness constraints, the algorithm should install the smallest subset possible, whose installment would cause a markedness constraint to become installable in the next recursion. For example, in (30), installing \textsc{Cntg} would remove WLP (30e), thereby freeing up the markedness constraint *\textsc{Cplx} at the next recursion; no comparable gain would flow from installing \textsc{Anc}. On those grounds, from (30) the BCD would install \textsc{Cntg.}
+
+\subsection[A support for learning Yidiny exceptionality]{A support for learning Yidiny exceptionality}
+
+I now consider several learning scenarios for Yidiny exceptionality. Each begins directly after the installation of undominated constraints. \cref{tab:support} contains a set of WLPs that is representive of all combinations of roots and suffixes which are relevant to the grammar of word-final deletion: it is not the complete support, but it represents the complete support well. Segments which can delete are underlined. To economize on space below, WLPs will be referred to by the letters in the first column of \cref{tab:support}.
+
+\begin{table}
+\begin{tabular}{lll@{ ${\succ}$} l}
+\lsptoprule
+a. & /margu-n\underline{i}/ & (mar gu:n)&(mar gu:) ni\\
+b. & /guygal-n\underline{i}/ & (guy ga:l) ni & (guy ga:l)\\
+c. & /guygal-n\underline{i}/ & (guy ga:l) ni & (guy ga:ln)\\ 
+d. & /margu-ŋ\underline{\smash{gu}}/ & (mar gu:ŋ) & (mar gu:ŋ) gu\\
+e. & /margu-ŋ\underline{\smash{gu}}/ & (mar gu:ŋ) & (mar gu:ŋg)\\
+ f. & /bigun\underline{u}-y\underline{i}-ŋ\underline{\smash{gu}}/ & (bi gu) (nu yi:ŋ) & (bi gun) (yiŋ gu)\\
+ g. & /wawa-l\underline{\smash{ɲu}}/ & (wa wa:l) & (wa wa:l) ɲu\\
+ h. & /gali-ŋ\underline{a}/ & (ga li:ŋ) & (ga li:) ŋa\\
+  i. & /gaɟar\underline{a}/ & (ga ɟa:r) & (ga ɟa:) ra\\
+ k. & /margu-nda/ & (mar gu:n) da & (mar gu:n)\\
+ l. & /wawa-lna/ & (wa wa:l) na & (wa wa:l)\\
+ m. & /gali-na/ & (ga li:) na & (ga li:n)\\
+ n. & /guɟara/ & (gu ɟa:) ra & (gu ɟa:r)\\
+ o. & /maɟinda-ŋ\underline{a}-lna/ & (ma ɟin) (da ŋa:l) na  &  (ma ɟin) (da ŋa:l)\\
+ p. & /bulmba/ & (bulm ba) & (bul ba)\\
+\lspbottomrule
+\end{tabular}
+\caption{Support for learning Yidiny exceptionality.}
+\label{tab:support}
+\end{table}
+
+\subsection[Learning the phonological account (preliminary version)]{Learning the phonological account (preliminary version)}
+\label{bkm:Ref335248258}
+We begin with the learning of the phonological account of Yidiny exceptionality described previously in §4.2. For the moment, I assume that input segments are already lexically $\Phi $-indexed as \textit{u} or \textit{n.} We begin after undominated constraints have been installed, with a support as in (31). 
+
+\ea 
+\renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|l||c|c|c||c|c|c|c|}
+\firsthline & \textsc{Prs}-\textit{u} & \textsc{Prs} & \textsc{*Cplx} & \textsc{Max} & \textsc{Max-C} &  \textsc{Cntg} &  \textsc{Anc} \\
+\hline
+\hline a, h, i. & W & W & & L & & & \\
+\hline b. & L & L & & W & W & & W \\
+\hline c. & L & L & W & W & & & \\
+\hline d, g. & W & & & L & L & & \\
+\hline e. & & & W & L & L & &\\
+\hline f. & & & & L & L & W &\\
+\hline j, k, l, o. & & L & & W & W & &\\
+\hline m, n. & & L & & W & & &\\
+\hline p. & & & L & W & & W & \\
+\hline \end{tabular}} \renewcommand*\arraystretch{1}
+\z
+
+Support (31) does not contain any markedness constraints that favor no losers. Two faithfulness constraints favor no losers: \textsc{Cntg}, which would free up *\textsc{Cplx} if installed, and \textsc{Anc,} which would not free up any markedness constraints. Consequently, \textsc{Cntg} is installed next, removing WLPs (f) and (p) from the support. After that, the newly freed-up *\textsc{Cplx} is installed, removing WLPs (c) and (e), and leaving (32). 
+
+\ea 
+\renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|l||c|c||c|c|c|}
+\firsthline & \textsc{Prs}-\textit{u} & \textsc{Prs} & \textsc{Max} & \textsc{Max-C} &  \textsc{Anc} \\
+\hline
+\hline a, h, i. & W & W & L & &  \\
+\hline b. & L & L & W & W & W \\
+\hline d, g. & W & W & L & L & \\
+\hline j, k, l, o. & & L & W & W & \\
+\hline m, n. & & L & W & & \\
+\hline \end{tabular}} \renewcommand*\arraystretch{1}
+\z
+
+In 32 only \textsc{Anc} favors no losers, and so is installed. This removes (b), freeing up \textsc{Prs}-\textit{u}, which is installed next, removing (a,h,i) and (d.,g), leaving (33). From (33), \textsc{Max} will be installed since it frees up \textsc{Prs}. This leaves \textsc{Prs} and \textsc{Max-C}, which according to faithfulness delay, will be ranked last as \textsc{Prs} \textsc{${\gg}$} \textsc{Max-C,} as in (34). 
+
+\ea 
+\renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|l||c||c|c|}
+\firsthline & \textsc{Prs} & \textsc{Max} & \textsc{Max-C} \\
+\hline
+\hline j, k, l, o. & L & W & W \\
+\hline m, n. & L & W & \\
+\hline \end{tabular}} \renewcommand*\arraystretch{1}
+\z
+
+\ea
+\textsc{Cntg} \textsc{${\gg}$}\textsc{} \textsc{*Cplx} \textsc{${\gg}$} \textsc{Anc} \textsc{${\gg}$}\textsc{} \textsc{Prs}{}-\textit{u} ${\gg}$ \textsc{Max} \textsc{${\gg}$}\textsc{} \textsc{Prs} \textsc{${\gg}$} \textsc{Max-C}
+\z
+
+Some comments are in order. First, the BCD algorithm has learned the key constraint ranking \textsc{Prs}{}-\textit{u} ${\gg}$ \textsc{Max} \textsc{${\gg}$}\textsc{} \textsc{Prs} responsible for the core of Yidiny exceptionality. Secondly however, it has also ranked \textsc{Anc} \textsc{${\gg}$} \textsc{Prs}{}-\textit{u}, in which case the learned grammar expressly prohibits morph-initial deletion. Indeed, had \textsc{Max-C/rt} been included in (31), it would also have been ranked highly since it only ever favors winners, meaning the grammar would also expressly prohibit CV deletion in roots (the reasons for my excluding \textsc{Max-C/rt} are clarified in §6). This means that the algorithm is learning precisely the rankings required to prevent the phonological solution from overgenerating, thereby voiding the major criticism of the phonological approach which was introduced in §4.2. This is perhaps surprising, so why is the ranking learned? It is learned because the BCD algorithm attempts to construct a restrictive grammar. The typical assumption, that grammars implementing a phonological approach would not assign redundant, high rankings to constraints like \textsc{Anc}, is predicated on an implicit assumption that the learner would be seeking a \textsc{permissive} grammar; doing so leads to overgeneration. However no successful learner would adopt that assumption, because successful learning in general requires a restrictive approach. For the theory of exceptionality, this is significant. It means the result obtained here, in which a phonological approach to exceptionality has been learned without overgeneration, is not dependent on some minor detail of the BCD, or the constraints used, or even OT. Rather, it follows from a general principle of learning. Consequently, the adoption of realistic assumptions about learning narrows the performance gap between the phonological and morphological approaches. I will examine the phonological approach further in §7.3.
+
+\subsection[Learning indexed constraints and the morphological analysis]{Learning indexed constraints and the morphological analysis}
+\label{bkm:Ref335251071}
+We consider next the learning of the morphological approach. The support begins, after installation of undominated constraints, as (35). These are the same constraints and WLPs as in the previous section, but without \textsc{Prs}{}-\textit{u}. The support begins with no lexically indexed constraints; how they are learned is considered shortly. I also do not include \textsc{Max-C/rt} in the support. \textsc{Max-C/rt} is essentially a variant of \textsc{Max-C,} indexed to all root morphs. This is the kind of constraint we might reasonably expect the morphological approach to learn.
+
+\ea 
+\renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|l||c|c||c|c|c|c|}
+\firsthline & \textsc{Prs} & \textsc{*Cplx} & \textsc{Max} & \textsc{Max-C} &  \textsc{Cntg} &  \textsc{Anc} \\
+\hline
+\hline a, h, i. & W & & L & & & \\
+\hline b. & L & & W & W & & W \\
+\hline c. & L & W & W & & & \\
+\hline d, g. & W & & L & L & & \\
+\hline e. & & W & L & L & & \\
+\hline f. & & & L & L & W & \\
+\hline j, k, l, o. & L & & W & W & & \\
+\hline m, n. & L & & W & & & \\
+\hline p. & & L & W & W & W & \\
+\hline \end{tabular}} \renewcommand*\arraystretch{1}
+\z
+
+Turning now to the BCD algorithm, neither of the markedness constraints in support (35) favors no losers. \textsc{Cntg} does, and would free up *\textsc{Cplx}. \textsc{Anc} also does, but would not free up any markedness constraints. Accordingly, \textsc{Cntg} is installed next, removing WLPs (f) and (p) are from the support, and *\textsc{Cplx} after that, removing (c) and (e), leaving (36).
+
+\ea 
+\renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|l||c||c|c|c|}
+\firsthline & \textsc{Prs} & \textsc{Max} & \textsc{Max-C} & \textsc{Ans} \\
+\hline
+\hline a, h, i. & W & L & & \\
+\hline b. & L & W & W & W \\
+\hline d, g. & W &  L & L &  \\
+\hline j, k, l, o. & L & W & W &  \\
+\hline m, n. & L & W & & \\
+\hline \end{tabular}} \renewcommand*\arraystretch{1}
+\z
+
+\textsc{Anc} is installed next, removing WLP (b), which leaves (37), a support in which there is no constraint which favors no losers. 
+
+\ea 
+\renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|l||c||c|c|}
+\firsthline & \textsc{Prs} & \textsc{Max} & \textsc{Max-C} \\
+\hline
+\hline a, h, i. & W & L & \\
+\hline d, g. & W & L & L  \\
+\hline j, k, l, o. & L & W & W \\
+\hline m, n. & L & W & \\
+\hline \end{tabular}} \renewcommand*\arraystretch{1}
+\z
+
+\noindent Supports in this state are said to have reached \textsc{inconsistency}. An inconsistency, however, is not a failure. 
+
+Inconsistencies indicate that the combination of data and assumptions currently under consideration have not led to a working grammar. Accordingly (assuming the data is correct), a revision of the assumptions is warranted. Suppose, in this case, that a revision could be made which leaves intact all previously installed constraints and their rankings, and the validity of all previously accounted-for WLPs, that is, a revision that would change only what is in the support. Suppose also that as a result of this revision the support came to contain a constraint that favors no losers. Such a revision would resolve the inconsistency. The BCD could restart and, one hopes, lead to a working grammar. Revisions that meet these criteria can be considered a type of learning. One such revision is to add a new, lexically M-indexed constraint to \textsc{Con}. 
+
+\citet{pater2009r} describes a method for learning M-indexed constraints and assigning co-indices to morphs, which takes a BCD inconsistency as its starting point. \citet{coetzee2009} extends this to Output-Output constraints, which I will not consider here. Becker's modifications \citep{becker2009,becker2011r} are addressed in §8. 
+
+Central to Pater's method is the operation of \textsc{constraint cloning}, a process I describe informally here and return to in detail in §8. Within the stalled support, a constraint C is sought which, if it were indexed to some set \textit{M} of morphs, would (i) favor at least one winner\footnote{The new constraint needs to favor at least one winner to have any chance of freeing up another constraint once it is installed.} and (ii) favor no losers. Assuming such a constraint C can be identified, it is then cloned, which is to say, a lexically M-indexed version of it, C\textit{\textsubscript{M}}, is added to the support. Because C\textit{\textsubscript{M}} favors no losers, it is installed next. For example, support (38) is the same as (37) but now displays information about which morphs are involved. I have annotated relevant undergoers as \textit{U} and non-undergoers as \textit{N}.
+
+\ea 
+\renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|ll||c||c|c|}
+\firsthline \multicolumn{2}{|c||}{} & \textsc{Prs} & \textsc{Max} & \textsc{Max-C} \\
+\hline
+\hline a. & /margu-ni\subit{U}/ & W & L & \\
+\hline d. & /margu-ni\subit{U}/ & W & L & L\\
+\hline g. & /margu-ŋgu\subit{U}/ & W & L & L\\
+\hline h. & /gali-ŋa\subit{U}/ & W & L &\\
+\hline i. & /gaɟara\subit{U}/ & W & L &\\
+\hline j. & /binarŋa/ & L &  W & W\\
+\hline k. & /margu-nda\textit{\textsubscript{N}}/ & L & W & W\\
+\hline l. & /wawa-lna\textit{\textsubscript{N}}/ & L & W & W\\
+\hline m. & /gali-na/ & L & W &\\
+\hline n. & /guɟara\textit{\textsubscript{N}}/ & L & W &\\
+\hline o. & /maɟinda-ŋa-lna\textit{\textsubscript{N}}/ & L & W & W\\
+\hline \end{tabular}} \renewcommand*\arraystretch{1}
+\z
+
+According to the criteria for cloning, all three of \textsc{Prs,} \textsc{Max} and \textsc{MaxC} are candidates for cloning (indexed to sets \textit{U}, \textit{N} and \textit{N} respectively). I assume that owing to faithfulness delay, markedness constraints are cloned in preference to faithfulness when both are available, in which case \textsc{Prs} will be cloned. In (39) the cloned, lexically M-indexed constraint \textsc{Prs}\textsc{\textsubscript{U}} is added to the support. Installing it removes WLPs (a,d,g,h,i) which frees up \textsc{Max,} whose installation is followed by \textsc{Prs} and \textsc{Max-C}. The resulting ranking is (40), which requires comment.
+
+\ea 
+\renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|l|c|c||c|c|}
+\firsthline & \textsc{Prs}-\subit{U}& \textsc{Prs} & \textsc{Max} & \textsc{Max-C} \\
+\hline
+\hline a, h, i. & W & W & L & \\
+\hline d, g. & W & W & L & L\\
+\hline j, k, l, o. &  & L & W & W\\
+\hline m, n. &  & L & W &\\
+\hline \end{tabular}} \renewcommand*\arraystretch{1}
+\z
+
+\ea
+\textsc{Cntg} \textsc{${\gg}$}\textsc{} \textsc{*Cplx} \textsc{${\gg}$} \textsc{Anc} \textsc{${\gg}$}\textsc{} \textsc{Prs}\subit{U}\textit{} ${\gg}$ \textsc{Max} \textsc{${\gg}$}\textsc{} \textsc{Prs} \textsc{${\gg}$} \textsc{Max-C}
+\z
+
+The algorithm has successfully learned the key constraint ranking \textsc{Prs}\subit{U}\textit{} ${\gg}$ \textsc{Max} \textsc{${\gg}$}\textsc{} \textsc{Prs}. However, it did not create an indexed version of \textsc{Max-C} for roots, and thus has not learned to expressly prohibit CV deletion in roots. To be sure, no individual roots ending in CCV or VCʹV (where Cʹ would be an illicit coda) will have been co-indexed to \textsc{Prs}\subit{U}\textit{} during the cloning operation (see §8 for details) and so none of those roots will be subject to CV deletion, however the ranking in (40) predicts that if the lexicon did contain a root such as *\textit{binarŋa}\subit{U}, then that root and any like it would undergo CV deletion. This is overgeneration of the same kind which was believed to beset phonological accounts. Thus, while §5.3 showed that grammars learned for the phonological account may suffer less than expected from overgeneration once learning is taken into consideration, §5.4 shows that grammars for the morphological account may suffer from overgeneration more than expected. In the next section, I propose a solution.
+
+\section[Morphological analytic bias: the Morphological Coherence Principle]{Morphological analytic bias: the Morphological Coherence Principle}
+\label{bkm:Ref336973523}\label{bkm:Ref335232765}
+In §5.4 the grammar which was learned for a morphological analysis of Yidiny exceptionality suffers from a manifestation of the subset problem. Although the algorithm correctly handled all attested data, it did not learn the more restrictive generalization which applies also to unattested data, that roots in Yidiny do not undergo consonant deletion. The problem arises because the cloning procedure assesses morphology on a morph-by-morph basis only, whereas the true generalization in Yidiny applies to a class of morphs, in this instance, to roots. The remedy to be pursued here has two parts. It adds a new kind of constraint cloning, which indexes a constraint not to an idiosyncratic lexical list of morphs, but to a general class. It then biases constraint cloning so that class-indexed (or \textsc{K-indexed}) cloning is preferred over lexically indexed cloning. Effectively, this introduces an analytic bias \citep{moreton2008r} from morphology to phonological learning at BCD inconsistencies. 
+
+Now, supposing that the algorithm is seeking a constraint that it will clone and K-index to some non-idiosyncratic class of morphs, which classes should be available for the learner to consider? Important here is the fact that human phonological learning will need to proceed in parallel with, and interleaved with, morphological learning (\citealt{tesar2007}, \citealt[6]{merchant2008}). Accordingly, I assume the learner has access both to universally-defined classes such as `root', and those classes which have been morphologically learned, such as \textsc{ergative case}. The biasing principle, which I term the Morphological Coherence Principle is stated in (41), where criterion 2 provides an additional bias towards maximal restrictiveness.
+
+\ea The Morphological Coherence Principle:
+\begin{enumerate}
+\item At a BCD inconsistency, attempt to create a K-indexed constraint, co-indexed to some universal or learned morphological class \textit{K}, before attempting to create a lexically-indexed constraint.
+\item If multiple constraints are eligible for K-indexation, select the one whose co-indexed class is most general.
+\end{enumerate}
+\z
+
+The MCP has some desirable theoretical properties. If the universal state of \textsc{Con} at the commencement of learning is \textsc{Con}\textit{\textsubscript{init}}, then the MCP obviates the need for \textsc{Con}\textit{\textsubscript{init}} to contain any constraints that are relativized to universal or learned morphological classes, since such constraints will be learned on demand, if and only if needed. In effect, this reduces the size of \textsc{Con}\textit{\textsubscript{init}} without any change in the explanatory capacity of the theory. And, since it allows the grammar to \textsc{build} constraints for language-specific morphological classes it makes those constraints available to the learner without problematically assuming them universal (\citealt{russell1995}, \citealt{hammond2000}, see also \citealt{smith2004}, \citealt{flack2007r}). The MCP operationalizes, in a specific manner, the kind of insight into linguistic theory that \citet{anderson2008} argues ought to follow from an improved understanding of the learning device. 
+
+Let us now return to Yidiny exceptionality, equipped with the MCP. Learning begins and proceeds as in §5.4 until the inconsistency in (38), at which point a constraint is sought for cloning. The MCP states that if possible, a constraint should be cloned and K-indexed. In (38) \textsc{Max}{}-C would favor no losers if it were K-indexed to the entire class of roots, so it is cloned and accordingly K-indexed. This is the functional equivalent of adding \textsc{Max}{}-C/\textsc{rt} to \textsc{Con,} and\textsc{} the reason why in §5 I did not include \textsc{Max}{}-C/\textsc{rt} in the support at the outset. Adding \textsc{Max-C/rt} to the support results in (42). From (42), \textsc{Max-C/rt} is installed and WLP (j) is removed, whereupon we return to inconsistency, in (51). As in §5.4, the process from that point results in the cloning of \textsc{Prs} and the installation of \textsc{Prs}\textsc{\textsubscript{U}}, then \textsc{Max}, \textsc{Prs} and \textsc{Max-C,} yielding the desired constraint ranking (43).\textsc{} 
+
+
+\ea 
+\renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|l|c|c||c|c|}
+\firsthline & \textsc{Prs} & \textsc{Max} & \textsc{Max-C/rt} & \textsc{Max-C} \\
+\hline
+\hline a, h, i. & W & L &  & \\
+\hline d, g. & W & L &  & L \\
+\hline j. & L & W & W & W\\
+\hline k, l, o. & L & W & & W \\
+\hline m, n. &  L & W & & \\
+\hline \end{tabular}} \renewcommand*\arraystretch{1}
+\z
+
+\ea 
+\renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|l|c||c|c|}
+\firsthline & \textsc{Prs} & \textsc{Max} & \textsc{Max-C} \\
+\hline
+\hline a, h, i. & W & L  & \\
+\hline d, g. & W & L & L \\
+\hline k, l, o. & L & W & W \\
+\hline m, n. &  L & W &  \\
+\hline \end{tabular}} \renewcommand*\arraystretch{1}
+\z
+
+\ea
+\textsc{Cntg} \textsc{${\gg}$}\textsc{} \textsc{*Cplx} \textsc{${\gg}$} \textsc{Anc} \textsc{${\gg}$} \textsc{Max-C/rt} \textsc{${\gg}$}\textsc{} \textsc{Prs}\subit{U}\textit{} ${\gg}$ \textsc{Max} \textsc{${\gg}$}\textsc{} \textsc{Prs} \textsc{${\gg}$} \textsc{Max-C}
+\z
+
+To summarize, results from §5.3 suggested that, provided a learner is seeking a restrictive grammar, the phonological approach to exceptionality may not suffer from overgeneration. This contradicts recent arguments, which on examination appear to adopt the implausible assumption that a learner would be seeking a permissive grammar. That being said, I have not yet clarified how the learner would arrive at the requisite $\Phi $-indices required by the phonological approach. That will be discussed in §7.3. Meanwhile, §5.4 revealed that without further refinement, the BCD is prone to learning grammars that overgenerate even in a morphological approach to exceptionality, due to an overly atomistic method of morphological generalization. This was remedied in §6 by the Morphological Coherence Principle (41), which solves the learning problem and simplifies \textsc{Con}\textit{\textsubscript{init}}.
+
+\section[The theoretical status of lexical indices]{The theoretical status of lexical indices}
+\label{bkm:Ref335653889}\subsection[Lexical M{}-indices]{Lexical M-indices}
+\label{bkm:Ref335571912}
+In §7 I set Yidiny to one side and consider some matters of theory.
+
+Lexical M-indices are representations which are visible to the phonology, but they are not phonological elements \textit{per se}. In OT, \textsc{Gen} cannot alter M-indices. It cannot add or remove them, or displace them from one morph to another. There is therefore no need for mechanisms such as M-index `faithfulness', rather it is simply assumed that the lexical affiliation of a morph \textit{m} with an M-index \textit{M} is identical in the input and output. This set of properties is shared with other kinds of lexical affiliation, such as the affiliation of a phonological element with its morph, and is termed Consistency of Exponence (\citealt{mccarthy1993a}, \citealt{vanderived2007}).
+
+Taking a historical view, M-indices closely resemble the \textsc{rule features} and \textsc{alphabet features} of early generative phonology (GP) (\citealt{chomskyhalle1968}, \citealt{lakoff1970}, \citealt{coats1970}, \citealt{zonneveld1978}, \textit{inter alia}). Both sets of formalisms fulfill the function of determining for cases of exceptionality whether a morph \textit{m} participates in certain phonological patterns or not, by ensuring that \textit{m} is visible or not visible as required, to OT's constraints or GP's phonological rules. Diacritic features were investigated extensively in GP. It was argued that the theory should not allow the phonology to manipulate diacritic features (\citealt{kiparsky1973r}, \citealt{zonneveld1978}). The same applies to M-indices in OT. It was argued that not all idiosyncrasies in the phonology can be analysed satisfactorily in terms of rule exception features, and that there is an additional role for cyclicity (\citealt{chomskyhalle1968}, \citealt{kiparsky1982r}) and the same has been recognized for M-indices \citep{pater2009r}. In GP, it was also assumed that the diacritic features of morph \textit{m} were distributed across, and directly characterized, each of the phonological elements (namely, segments) in \textit{m}. We might ask whether this is also true of M-indices in OT. Suppose that it is, so that the \textit{M}{}-indices of a morph \textit{m} directly characterize each phonological element $\varphi $ that is lexically affiliated with \textit{m} (that is all $\varphi $ which are \textsc{exponents} of \textit{m}). In that case, the relative definition of an M-indexed constraint (25), repeated here as (45), can be revised and simplified as (46). 
+
+\ea
+V(\textsc{C}\textsc{\textsubscript{M}}) \ =\textsubscript{def} V(\textsc{C}) \ ${\cap}$ \ L\textsubscript{$\varphi $}(\textit{m}${\in}$\textit{M} \& \textsc{Exp}($\varphi $, \textit{m})), \textit{where}:
+
+\textsc{M}\textsc{} is the set of morphs co-indexed to C\textit{\textsubscript{M}}.
+
+\textsc{Exp}($\varphi $\textit{, m}) states that element $\varphi $\textit{} is an exponent of morph \textit{m}
+\z
+
+\ea
+V(\textsc{C}\textsc{\textsubscript{M}}) \ =\textsubscript{def} V(\textsc{C)} \ ${\cap}$ \ L\textsubscript{$\varphi $}($\varphi $${\in}$$\Phi $\textit{\textsubscript{M}}), \textit{where}:
+
+\ $\Phi $\textit{\textsubscript{M}} is the set of phonological elements co-indexed to C\textit{\textsubscript{M}}.
+\z
+
+It will be recalled that the relative definition of a constraint C\textit{\textsubscript{M}} is expressed as the set intersection between the loci of variation of the unindexed constraint C, written V(C), and the set of loci, L\textsubscript{$\varphi $}(D($\varphi $)) which contain some criterial type of phonological element $\varphi $, described by predicate D($\varphi $). Importantly, this means that M-indexed constraints are defined \textsc{directly} in terms of phonological elements, $\varphi $, and only indirectly in terms of morphs \textit{m}. The indirectness shows up in the complexity of D($\varphi $) in (45), which links morphs to their exponent $\varphi $ elements via the function \textsc{Exp}($\varphi $, \textit{m}). This is in contrast with (46), where the assumption is that all $\varphi $ elements are directly characterized by the M-index borne by their affiliated morph. The constraint definition no longer refers to the morph itself, and so the predicate D($\varphi $) is simpler. 
+
+At risk of laboring the point, the phonology itself assesses violations of M-indexed constraints directly in terms of $\varphi $ elements, not morphs. While it is possible to refer to the morphs in the definitions of M-indexed constraints as in (17)/(45), it is not necessary. Nor is it possible to refer only to the morphs and not to the $\varphi $ elements, since the loci of violation of these constraints are defined inherently at a sub-morphological, phonological level.
+
+\subsection[Lexical $\Phi ${}-indices]{Lexical $\Phi $-indices}
+\label{bkm:Ref335561253}
+Let us now consider the nature of lexical $\Phi $-indices of the type I invoked in §4.2 and §5.3. My proposal is that these are exactly like M-indices: they are non-phonological indices of lexical affiliation, visible to, but not manipulable by, the phonology and used for making particular phonological elements visible or not, as required, to OT's constraints in order to provide a coherent account of exceptionality. The only distinction between $\Phi $-indices and M-indices lies in the supplementary assumption attached to M-indices, in (47).
+
+\ea The M-index assumption:
+
+A lexical index which characterizes phonological element $\varphi $\textit{\textsubscript{i}} will also characterize all other phonological elements $\varphi $\textit{\textsubscript{j}} affiliated with the same morph \textit{m}.
+\z
+
+\noindent $\Phi $-indices are not subject to this redundancy; they are affiliated with only those $\varphi $ elements for which the affiliation makes any difference to the analysis of language. As I will show in §8, that makes $\Phi $-indices somewhat simpler to learn, since they correspond more directly to the evidence in the data. 
+
+The reader may also have noticed that the definition of a $\Phi $-indexed constraint in (21) is almost exactly like the simplified definition of an M-indexed constraint in (46). This reflects the fact that for the operation of the phonology, it is $\varphi $ elements, and the indexation of specific $\varphi $ elements, that matter. Whether or not one chooses to adopt supplementary assumption (47) in fact has no material consequence for the evaluation of an individual indexed constraint. The question of whether there are other consequences, and whether they are desirable, is taken up in §9.
+
+\subsection[Learning lexical $\Phi ${}-indices]{Learning lexical $\Phi $-indices}
+\label{bkm:Ref335244838}
+Given the proposal above, the learning of $\Phi $-indices is quite parallel to the learning of M-indices. I assume that the MCP still applies, so that class-based exceptionality and K-indexed constraints continue to be learned with priority over idiosyncratic exceptionality, even though the latter will now be accounted for by $\Phi $-indexed constraints, not M-indexed. This is a coherent assumption to make. The MCP is concerned with the learning of class-based generalizations, whereas $\Phi $- and M-indexed constraints are alternative devices for learning idiosyncrasies. Accordingly, in a stalled support once there are no K-indexed constraints available for cloning, the algorithm seeks a constraint C which, were it indexed to some set $\Phi $\textit{} of phonological elements, would (i) favor at least one winner and (ii) favor no losers. All else proceeds as for M-indexed constraints. In the learning of Yidiny word-final deletion, the process begins as in §6, leading to a first inconsistency resolved by the addition of \textsc{Max-C/rt} to \textsc{Con}, and proceeding from there to the second inconsistency (43), repeated here in part and in more detail as (48).
+
+\ea 
+\renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|ll||c||c|c|}
+\firsthline  & & \textsc{Prs} & \textsc{Max} & \textsc{Max-C} \\
+\hline a. & /margu-n\underline{i}/ & \tworow{W} &  \tworow{L} & \\
+& (mar gu:n) ${\succ}$ (mar gu:) ni  &&& \\
+\hline d. & /margu-ŋ\underline{\smash{gu}}/  & \tworow{W} & \tworow{L} & \tworow{L} \\
+& (mar gu:ŋ) ${\succ}$ (mar gu:ŋ) gu &&& \\
+\hline h. & /gali-ŋ\underline{a}/ & \tworow{W} & \tworow{L} & \\
+ & (ga li:ŋ) ${\succ}$ (ga li:) ŋa &&& \\
+\hline i. & /gaɟar\underline{a}/  & \tworow{W} & \tworow{L} & \\
+& (ga ɟa:r) ${\succ}$ (ga ɟa:) ra &&& \\
+\hline k. & /margu-nda/& \tworow{L} & \tworow{W} & \tworow{W} \\
+ & (mar gu:n) da ${\succ}$ (mar gu:n) &&& \\
+\hline m. & /gali-na/  & \tworow{L} & \tworow{W} & \\
+& (ga li:) na ${\succ}$ (ga li:n) &&& \\
+\hline n. & /guɟara/ & \tworow{L} & \tworow{W} & \\
+& (gu ɟa:) ra ${\succ}$ (gu ɟa:r) &&& \\
+\hline o. & /maɟinda-ŋ\underline{a}-lna/  & \tworow{L} & \tworow{W} & W\\
+ & (ma ɟin) (da ŋa:l) na ${\succ}$ (ma ɟin) (da ŋa:l)  & & & \\
+\hline \end{tabular}} \renewcommand*\arraystretch{1}
+\z
+
+In (48), no K-indexed constraint is available for cloning.\footnote{Actually this is not strictly true. All \textsc{past} suffixes for example are undergoers, in which case the MCP would generate and rank \textsc{Prs}\textsubscript{PST}\textsc{.} Notwithstanding this, the essential argument remains, since other morphological classes exist, such as \textsc{ergative} and `root', that are not uniformly (non)undergoers, and still need to be handled by lexically-indexed, not K-indexed, constraints. This minor correction applies equally to the learning process in §6.} Turning to potential $\Phi $-indexed constraints, we see that the constraint \textsc{Prs} would, if it were co-indexed to all underlined phonological elements, favor at least one winner and favor no losers, and so it is cloned and co-indexed resulting in (49). From there the algorithm proceeds in the now-familiar fashion, resulting in grammar (50). With its high-ranking \textsc{Max-C/rt} and \textsc{Anc}, (50) does not overgenerate. Moreover, given the argument in §7.2, that for \textsc{Eval} there is no detectable difference between M-indexed and $\Phi $-indexed constraints, we can see that grammar (50) is in all material aspects identical to grammar (44) learned in §6.
+
+
+\ea 
+\renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|ll||c|c||c|c|}
+\firsthline  & & \textsc{Prs} & \textsc{Prs}\subit{U} & \textsc{Max} & \textsc{Max-C} \\
+\hline a. & /margu-n\underline{i}/ & W & W &  L & \\
+\hline d. & /margu-ŋ\underline{gu}/ & W & W & L & L\\
+\hline h. & /gali-ŋ\underline{a}/  & W & W & L & \\
+\hline i. & /gaɟar\underline{a}/ & W & W & L & \\
+\hline k. & /margu-nda/ &  L & & W & W\\
+\hline m. & /gali-na/ &  L & & W & \\
+\hline n. & /guɟara/ & L & & W & \\
+\hline o. & /maɟinda-ŋ\underline{a}-lna/ & L & & W & W\\
+\hline \end{tabular}} \renewcommand*\arraystretch{1}
+\z
+
+\ea
+\textsc{Cntg} \textsc{${\gg}$}\textsc{} \textsc{*Cplx} \textsc{${\gg}$} \textsc{Anc} \textsc{${\gg}$} \textsc{Max-C/rt} \textsc{${\gg}$}\textsc{} \textsc{Prs-}\textit{u} ${\gg}$ \textsc{Max} \textsc{${\gg}$}\textsc{} \textsc{Prs}
+\z
+
+\section[Constraint cloning]{Constraint cloning}
+\label{bkm:Ref335669215}\subsection[Assessing eligibility for cloning]{Assessing eligibility for cloning}
+\label{bkm:Ref335675122}
+It is necessary now to examine more precisely the processes by which constraints are deemed eligible for cloning (§8.1), by which a viable set of co-indexed elements is identified (§8.2), and by which a selection is made between multiple eligible constraints (§8.3).
+
+Earlier, I introduced criteria by virtue of which a constraint becomes eligible for cloning. These are restated in (51) in a generalized from, so that the set \textit{S} is: a coherent class of morphs for K-indexing; an idiosyncratic set of morphs for M-indexing; or an idiosyncratic set of lexical phonological elements for $\Phi ${}-indexing.
+
+\ea
+A constraint should be sought for cloning which, if it were indexed to set \textit{S}, would (i) favor at least one winner, and (ii)~favor no losers. 
+\z
+
+Criterion (51ii) ensures that once the cloned constraint is added to the support, it can be installed; (51i) ensures that its installation will remove at least one WLP from the support, and thereby have some hope of freeing up other constraints. The formulation in (51) improves upon Pater's \citeyearpar[144]{pater2009r} criterion, which is to seek a constraint that favors no losers `for all instances' of some morph.\footnote{Pater's phrase `favors only winners' is equivalent to my `favors no losers'.} To see why Pater's criterion fails, consider WLPs (h,l,o) from the stalled support (38), reproduced in part and in detail in (52). For the purposes of discussion, I assume we are attempting to learn an M-indexed constraint, though the argument generalizes to other kinds.
+
+\ea 
+\renewcommand*\arraystretch{1.2}
+\scalebox{1}[1]{\begin{tabular}[t]{|ll||c||c|c|}
+\firsthline  & & \textsc{Prs} & \textsc{Max} & \textsc{Max-C} \\
+\hline h. & /gali-ŋa/ `go-\textsc{com[imp]}' & \tworow{W} &  & \\
+ & (ga li:ŋ) ${\succ}$ (ga li:) ŋa & & & \\
+\hline l. &/wawa-lna/ `see-\textsc{pure}'  & \tworow{L} & \tworow{W} & \tworow{W} \\
+ & (wa wa:l) na ${\succ}$ (wa wa:l) & & & \\
+\hline o. &  /maɟinda-ŋa-lna/ `walk up-\textsc{com-purp}'& \tworow{L} & \tworow{W} & \tworow{W} \\
+ &  (ma ɟin) (da ŋa:l) na ${\succ}$ (ma ɟin) (da ŋa:l)  & & & \\
+\hline \end{tabular}} \renewcommand*\arraystretch{1}
+\z
+
+In (52), WLPs (h) and (o) both contain the suffix -\textit{ŋa}, a regular undergoer which our procedure ought to co-index to the M-indexed constraint \textsc{Prs}\textsc{\textsubscript{U}}. In WLP (h) word-final \textit{ŋa} is subject to deletion, and \textsc{Prs} favors the winner. In WLP (o) non-final \textit{ŋa} is parsed into a foot and escapes deletion. Nevertheless, for WLP (o) \textsc{Prs} favors the loser. This has nothing to do with \textit{ŋa}, but is due to the non-deletion of the unparsed, word-final non-undergoer -\textit{lna}. Pater's co-indexing criterion asks whether \textsc{Prs} favors no losers `for all instances' of -\textit{ŋa} in the support. The answer is `no', because (o) contains an instance of -\textit{ŋa} and \textsc{Prs} favors the loser for (o). This is the wrong result; the suffix -\textit{ŋa} ought to get co-indexed to \textsc{Prs}\textsc{\textsubscript{U}}. It comes about because Pater's criterion does not discriminate between morphs that contribute to violations and those which are present in the word, but do not contribute. The criteria in (51) avoid this problem because they refer directly to how the co-indexed constraint would perform, were it created. The next two sections detail how to operationalize them.
+
+\subsection[Specifying co{}-indexed sets]{Specifying co-indexed sets}
+\label{bkm:Ref335906264}\label{bkm:Ref335576418}
+The question considered here is which set \textit{S} ought to be co-indexed to a given constraint C if we wish to clone C? The answer varies depending on which kind of indexed constraint we are constructing. One possible answer is that no such set exists, and C cannot be cloned. Seen from that angle, the question here is also: is C eligible for cloning?
+
+K-indexed constraints can be co-indexed only to the morphological classes \textit{K}\textit{\textsubscript{1}}\textit{, K}\textit{\textsubscript{2}} \dots \textit{K}\textit{\textsubscript{n}} in the language (§6). In (41) I suggested that the preferred class for co-indexation is the \textsc{most} \textsc{general} one. Thus, to efficiently assess if constraint C is eligible for cloning and K-indexing, the learner should proceed stepwise through the available classes, ordered by decreasing generality. The process is one of trial and error. At each step, the constraint C\textit{\textsubscript{K}} is built and applied to all WLPs in the support. If C\textit{\textsubscript{K}} meets criteria (51) then it is successful; the process halts and C\textit{\textsubscript{K}} is used, otherwise the trial and error continues. If by the end, no successful constraint C\textit{\textsubscript{K1}} \dots C\textit{\textsubscript{Kn} }is found, then C is ineligible for cloning.
+
+For M-indexed and $\Phi ${}-indexed constraints, the desired set \textit{S} can be identified by focusing attention on loci of violation. Suppose we are considering constraint C for cloning. For any WLP, \textit{p}, its loci of violation of constraint C fall into three classes: the class \textsc{w}(\textit{p}), responsible for violations of C that favor the winner (i.e., the locus occurs in the loser only), class \textsc{l}(\textit{p}) which favor the loser (locus occurs in the winner only) and class \textsc{n}(\textit{p}) which favor neither (occurs in both). Next define $\Phi $\textsc{\textsubscript{w}}\textsubscript{(}\textit{\textsubscript{p}}\textsubscript{)} as the set of phonological elements $\varphi $ contained in any of the loci in \textsc{w}(\textit{p}), and $\Phi $\textsc{\textsubscript{l}}\textsubscript{(}\textit{\textsubscript{p}}\textsubscript{)} as the set of $\varphi $ elements contained in any of the loci in \textsc{l}(\textit{p}). Finally, define $\Phi $\textsubscript{W} as the union of $\Phi $\textsc{\textsubscript{w}}\textsubscript{(}\textit{\textsubscript{p}}\textsubscript{)} for all WLPs, \textit{p}\textsubscript{1}\textit{, p}\textsubscript{2}\textit{ ... p}\textit{\textsubscript{n}}\textit{,} in the support, and $\Phi $\textsubscript{L} as the union of all $\Phi $\textsc{\textsubscript{l}}\textsubscript{(}\textit{\textsubscript{p}}\textsubscript{)} in the support. Now, consider the set ($\Phi $\textsubscript{W} -- $\Phi $\textsubscript{L}), the set difference between $\Phi $\textsubscript{W} and $\Phi $\textsubscript{L}. This is the set of all $\varphi $ elements which both (i)~appear in at least one locus that in at least one WLP causes C to favor a winner, and (ii)~never appear in a locus that causes C to favor a loser. For a $\Phi $-indexed constraint this is an optimal set \textit{S}. If for a given constraint C, ($\Phi $\textsubscript{W} -- $\Phi $\textsubscript{L}) is the null set, then we may conclude that C is ineligible for cloning.\footnote{To be precise, if ($\Phi $\textsubscript{W} -- $\Phi $\textsubscript{L}) is the null set then it is possible that there still exists some additional, viable set \textit{S} which contains fortuitous elements $\varphi $\textit{\textsubscript{i}} which are elements of both $\Phi $\textsubscript{W} and $\Phi $\textsubscript{L} such that in \textsc{every} WLP \textit{p} in which $\varphi $\textit{\textsubscript{i}} is contained in some number \textit{n} of the loci \textsc{w}(\textit{p}) there are at least \textit{n} offsetting loci in \textsc{l}(\textit{p}) which contain other elements $\varphi $\textit{\textsubscript{j}} which are also in \textit{S}. Identifying these fortuitous elements $\varphi $\textit{\textsubscript{i}}, or even determining if any exist, would very likely be prohibitively expensive computationally.}  
+
+To find the equivalent for an M-indexed constraint, it is necessary to extrapolate from $\Phi $\textsubscript{W} and $\Phi $\textsubscript{L} to morphs: set \textit{S} will be the set (\textit{M}\textsubscript{W} -- \textit{M}\textsubscript{L}) where \textit{M}\textsubscript{W} is the set of all morphs \textit{m}\textit{\textsubscript{w}}, such that any of \textit{m}\textit{\textsubscript{w}}'s phonological exponents is an element of $\Phi $\textsubscript{W}; and \textit{M}\textsubscript{L} is the set of all morphs \textit{m}\textit{\textsubscript{l}}, such that any of \textit{m}\textit{\textsubscript{l}}'s phonological exponents is an element of $\Phi $\textsubscript{L}. Note that \textit{M}\textsubscript{W} and \textit{M}\textsubscript{L} can be calculated only after the calculation of $\Phi $\textsubscript{W} and $\Phi $\textsubscript{L} is performed.
+
+In §7.1 I considered what is involved computationally in assessing violations of $\Phi $- and M-indexed constraints, and argued that the calculations for both are essentially concerned with $\varphi $ elements, not morphs. Here we see that the same is true when learning the co-indexed set. As in §7.1, one can bring morphs into the picture, to be sure, but in both cases doing so requires additional computational effort, for no effective difference in how the grammar will work. In §9 I will argue the theory to be preferred is one which admits lexically $\Phi $-indexed constraints, but not M-indexed.
+
+\subsection[Selecting among eligible constraints]{Selecting among eligible constraints}
+\label{bkm:Ref335677590}
+Suppose there are multiple lexically-indexed constraints which are eligible for cloning; which do we choose? The principles of faithfulness delay and freeing-up of markedness constraints will eliminate some options (§5.1). Beyond that, I suggest the learner chooses the constraint which favors the most winners, and whose installment would therefore remove the greatest number of WLPs. A desirable consequence will be a bias toward restrictiveness. For example, suppose \textsc{Max} is eligible. If so, then so too is \textsc{Max}{}-C, \textsc{Max}{}-V, \textsc{Max}{}-p, etc. This `maximize-winners' criterion would select \textsc{Max}, and increase the restrictiveness of the grammar, relative to the other options.
+
+Interestingly, \citet{becker2009} proposes a \textsc{minimize}-winners criterion, whose effect is to generate many, very specific cloned constraints, each indexed to highly specific subclasses in the lexicon. The aim is to account for a particular phenomenon, which I describe here. I argue that other accounts are possible, and that Becker's solution has undesirable consequences.
+
+When language learners assign novel words to existing grammatical categories, they do so on the basis of statistical correlations that exist in the lexicon, for example between category membership and aspects of the members' phonological forms \citep{poplack1982,albright2002b}. One such task is to assign a word as exceptional or non-exceptional, given evidence which underdetermines that choice. The key question here is, what existing statistical knowledge do speakers use, and what do they ignore? In Turkish, speakers appear to ignore correlations between the (non)alternation of a stop's laryngeal features and the quality of its neighboring vowel. It is proposed \citep{becker2009,becker2011r} that this is because speakers do not access lexical statistics \textit{per se}, rather they attend to the statistics of constraint indexation. Importantly, \textsc{Con} lacks constraints such as *[+\textsc{high}]tV which refer to a stop and the quality of its vocalic neighbor. Consequently, no such constraint can be indexed, making such correlations invisible and hence irrelevant to a speaker when she assigns a novel word to a (non)exceptional lexical category. Assuming this is the case, then in order for fine-grained knowledge to be available to speakers, an atomizing, `minimize-winners' criterion for cloning is needed. However, this solution would seem neither necessary nor warranted.
+
+Notwithstanding the facts of Turkish, speakers in other languages and performing other novel-word tasks do use lexical correlations which lack a corresponding constraint in \textsc{Con} (\citealt{moreton1999}, \citealt{albright2002b}, \citealt{albrighthayes2002}, \citealt{ernestus2003}), indicating that speakers are capable of such computation. In that case, atomized indexed constraints alone are not enough to produce the Turkish results. An additional stipulation is required, that this ability is suppressed when assigning novel words to exceptionality classes; yet this leads to a curious view of phonology. Whereas the grammar is usually the store of generalizations, just in the case of exceptionality, it is a store of highly detailed idiosyncrasy, and just in that case speakers ignore their usual, lexical store of idiosyncrasy and turn to the grammar. More satisfying would be to find some other explanation of the Turkish data. While that would take us well beyond this scope of this paper, it can be noted that what is required is a mechanism that can filter the lexical information in some way. That mechanism needn't be part of the OT grammar. Indeed, if it is true that learners build certain constraints during learning (\citealt{flack2007r}, \citealt{hayes2008}, \citealt{hayes2014}), then there must exist \textsc{extra}-grammatical generalization devices, which may provide the lexicon-filtering power needed. For now I conclude that that Becker's proposal follows from just one possible solution to an interesting puzzle, however both the puzzle and solution are outliers relative to what else we know. In contrast, a `maximize-winners' criterion leads to the learning of restrictive grammars, and on those general grounds would appear correct.
+
+\section[Discussion]{Discussion}
+\label{bkm:Ref335654326}\subsection[The case against concrete accounts]{The case against concrete accounts}
+\label{bkm:Ref336973108}
+Throughout this paper, I have considered only the \textsc{abstract} phonological approach to analyzing exceptionality, gradually building the argument that its superiority to the morphological approach lies in the fact that it localizes exceptionality to specific $\varphi $ elements, which are the elements in terms of which the relevant computation must be carried out. \textsc{Concrete} phonological approaches also localize exceptionality at a sub-morphological level, but compared to the abstract approach they are ill-suited to learning, and to seriality, as follows. 
+
+Lexical indexation is an ideal response to BCD inconsistency, because it annotates the lexicon with indices which are invisible to all previously installed constraints. This guarantees, without needing to check, that all previously accounted-for WLPs remain accounted for. Even if some of them contain lexical $\varphi $ elements which acquire a new index, their violations of all previously ranked constraints remain unchanged, since no previously-ranked constraint is sensitive to the new index. In contrast, the alteration of phonological form — for example, removing a root node from certain segments — may very well alter the evaluation of WLPs by already-ranked constraints, thus it requires a re-evaluation of the entire ranking. It is not possible to simply repair an inconsistency and resume the BCD process. An \textsc{abstract} phonological account is therefore easier to learn. 
+
+In serial theories, concrete phonological approaches face the problem that in non-initial strata, it is possible that a preceding stratum will have removed, altered, moved or introduced, those aspects of phonological form which should function as pseudo-indices, which lack Consistency of Exponence. This opens up the possibility of all manner of phonological manipulations of exceptionality, for which I am unaware of any evidence.
+
+Taking a more historical view, \citet{chomsky1964} criticized concrete phonological accounts espoused by structuralists (e.g. \citealt{bloomfield1939}) for the proliferation of underlying segments that they entailed. To the extent that such concerns matter to modern phonological theories, $\Phi $-indexation avoids such proliferation by augmenting representations with non-phonological indices (cf §7), rather than additional underlying phonological distinctions. 
+
+\subsection[The case against M{}-indexing]{The case against M-indexing}
+\label{bkm:Ref336968525}
+In §7 and §8 I showed that for both constraint evaluation and constraint learning, exceptionality is calculated in terms of phonological elements, not morphs. Morphs can be brought into the picture, but at additional computational cost and to no effect. Perhaps, however, it is nevertheless empirically true that exceptionality is inherently morph-bound. If that were so, then phonological exceptionality in any morph \textit{m} would always be either (i) uniform throughout all phonological exponents of \textit{m} or (ii) entirely predictably located within \textit{m}. Yet this is not the case. If we accept something along the lines of Anderson's \citeyearpar{anderson1982} analysis of French schwa as an exceptionally-deleting /ø/ vowel, then that exceptional property is neither uniform throughout morphs nor does it have a predictable location. Similarly, in Turkish, non-high round vowels are phonotactically exceptional outside the first syllable \citep{clements1982r,Van1991}, yet the location of the exception is not predictable, as seen in a comparison of \textit{otoban} `highway', \textit{monoton} `monotone', \textit{fenomen} `phenomenon' and \textit{paradoks} `paradox'. There is no doubt that in most known cases, exceptionality does happen to be either uniform or predictable within a morph, but this follows uninterestingly from the fact that most exceptional morphs are short, or that most phonological alternations are either local, in which case their location inside a morph is predictably restricted to an edge, or domain-spanning, in which case the morph acts uniformly. However, when such uninformative cases are set aside, the small, informative residue of evidence does not support the morph-based view.
+
+A second argument in defense of M-indices might be that morphs, and not $\varphi $ elements, belong to lexical strata, and that a single morphological diacritic can therefore coherently index a whole set of phonological exceptionality patterns, patterns which impact different parts of the morph and which therefore would be only incoherently represented by individual diacritics on $\varphi $ elements. Yet the empirical falsity of this claim has long been recognized. SPE (\citealt{chomskyhalle1968}) permitted both stratal diacritics, later labeled \textsc{morphological features} \citep{postal1968} and more specific \textsc{rule features} \citep{lakoff1970}, in view of the fact that distinct phonological patterns associated with strata are not uniformly attested in all morphs. For more recent work, see for example \citet[71,72,85ff]{labrune2012} on Japanese.
+
+A third argument in defense of M-indices might be that since some kinds of phonological exceptionality are cyclic (§7.1), and since cycles are inherently tied to morphology, not $\varphi $ elements, then something like M-indices are required anyhow, in which case $\Phi $-indices are redundant. I would suggest that this is a category mistake. While it is true that cycles are inherently tied to morphology, they are tied not to morphs, but to morphological operations. Some operations are non-concatenative and hence morph-free \citep{anderson1992}. Cyclicity effects, therefore, are about how phonological subgrammars correlate with \textsc{operations}; in contrast, $\Phi $-indices are about correlation with \textsc{forms}. M-indices fall uncomfortably in between. Since they are inherently attached to morphs, they will be unavailable for the triggering of cyclicity effects associated with non-concatenative operations. And, as we have seen above, they are inefficient, and in all likelihood insufficient, devices for exceptionality of forms.
+
+\section[Conclusion]{Conclusion}
+
+For most of the generative period, an implicit assumption has been that we must choose between a concrete phonological and a diacritic morphological approach to phonological exceptionality.\footnote{Except, trivially, in purely abstract theories (e.g. \citealt{lamb1966}, \citealt{fudge1967}).} But the argument from learning is that the correct theory is phonological and diacritic, based on lexical phonological indices which are visible to the phonology but not manipulable by it. The concrete phonological approach, whose pseudo-indices are manipulable by the phonology, is ill-suited to efficient learning (§9.1). Diacritic approaches are well suited to learning; however the computation of exceptionality is simply not carried out in terms of morphs, rather its currency is lexical phonological elements. This is true for both constraint evaluation (§7.1) and the learning of co-indexation (§8.2). Concurrently, plausible assumptions about learning ensure that a diacritic phonological account does not suffer from overgeneration (§5.3), and reveal the need for a morphological analytic bias, operationalized here as the Morphological Coherence Principle (§6). Finally, a morph-based diacritic theory appears empirically insufficient in the inevitably small number of cases that are informative (§9.2). No doubt there is much more to be said on the topic of exceptionality, but I hope to have established that the nature of exceptionality is, in essence, phonological and diacritic.
+
+\section*{Abbreviations}
+Abbreviations conform with the Leipzig glossing rules; in addition are: \textsc{lest} `lest' and \textsc{set}  `inclusion/one of a group' \citep{dixon1977a}.
+
+%\todo{See \texttt{10.6084/m9.figshare.4579696} for the Appendix}
+
+\printbibliography[heading=subbibliography,notkeyword=this]
+
+% \todos
+\end{document}
+

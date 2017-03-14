@@ -1,0 +1,72 @@
+languages to index
+Angami
+Arabic
+Avestan
+Bantu
+Basque
+Chamorro
+Chichewa
+Chimwiini
+Chinese
+Cibemba
+English
+Faroese
+French
+Gaahmg
+Haida
+Hebrew
+Hittite
+Hixkaryana
+Icelandic
+Indo-European
+Italian
+K'iche'
+Kinande
+Kitharaka
+Korean
+Latin
+Lebanese Arabic
+Luganda
+Lusoga
+Makua
+Mayan 
+Ndebele
+Niger-Congo
+Nilo-Saharan
+Nyakyusa
+Nyamwezi
+Old Norse
+Proto-Bantu
+Rumantsch
+Russian
+Samoyedic (group)
+Sanskrit
+Serbo-Croatian
+Shona
+Sino-Tibetan
+Slavic (group)
+Swedish
+Tagalog
+Thai
+Tongan
+Tseltal
+Tsotsil
+Zinacantec Tsotsil
+Tungusic (group)
+Turkish
+Vietnamese
+Welsh
+Wolof
+Yidiny
+Zulu
+Barcelona Catalan
+Bilua
+English
+Formentera Catalan
+Literary Macedonian
+Modern Greek
+Modern Irish
+Neapolitan Italian
+Spanish
+Vedic
+

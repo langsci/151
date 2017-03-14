@@ -1,0 +1,1018 @@
+\documentclass[output=paper,
+modfonts
+]{LSP/langsci}
+
+
+%\input{localpackages.tex}
+
+%\input{localcommands.tex}
+ 
+
+\title{Root-based syntax and Japanese derivational morphology}
+
+\author{%
+Brent de Chene\affiliation{Waseda University}
+}
+
+% \sectionDOI{} %will be filled in at production
+% \epigram{}
+
+\abstract{
+ This paper argues that the formation of transitive and
+intransitive verb stems in Japanese, a process that has been widely seen
+as supporting the Distributed Morphology view of derivational
+stem-formation as performed by the syntax, cannot in fact be analyzed as
+syntactic. The Japanese data are thus consistent with \citegen{anderson1982a}
+claim that it is precisely that morphology traditionally classified as
+inflectional that reflects syntactic operations.
+}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+
+In a well-known paper, \citet[587]{anderson1982a} proposes that ``\isi{Inflectional
+morphology} is what is relevant to the \isi{syntax},'' where syntactically
+relevant properties are those ``assigned to words by principles which
+make essential reference to larger \isi{syntactic structures}.'' He claims
+further that a delimitation of \isi{inflection} on this basis closely mirrors
+the traditional understanding of where the boundary between inflection
+and \isi{derivation} lies. In contrast, the \isi{Distributed Morphology} literature,
+in treating syntax as root-based and stem formation of all types as
+syntactic, denies significance to the traditional distinction between
+inflection and derivation and renders vacuous the claim that inflection
+is just that portion of morphology that realizes elements and properties
+manipulated by the syntax.\footnote{The founding paper of the DM
+  framework, \citet{halle1993a}, presents DM as a theory of
+  inflection and makes no explicit claims about derivation, but the
+  adoption of root-based syntax and the rejection of the
+  inflection/derivation distinction are clear at least by \citet{marantz1997a,marantz2001a}. See below for further references.} The present paper
+takes up the formation of transitive and intransitive verb stems in
+\ili{Japanese}, a case that has been widely seen as supporting the DM view of
+stem-formation as performed by the syntax, and argues that a closer look
+reveals that the derivational processes in question cannot in fact be
+analyzed as syntactic. In the end, then, the Japanese data is consistent
+with Anderson's view that there is a fundamental distinction between
+\isi{inflection} and \isi{derivation} and that the criterion of syntactic relevance
+picks out just that morphology traditionally classified as
+inflectional.\footnote{On a personal note, while I have taken the idea
+  that inflection is precisely the syntactically relevant morphology as
+  a guiding principle for many years, it was anything but obvious to me
+  at the time Steve proposed it. It ranks high in my personal inventory
+  of the many things I have learned from Steve, and I am happy to have
+  this opportunity to reaffirm it in a volume dedicated to him.}
+
+In recent years, the derivational morphology of the Japanese verb has
+become a standard example (as in \citealt{harley2012a}) illustrating the DM claim
+that syntax is \isi{root}-based -- the claim, that is, that along with
+\isi{functional morphemes}, the atoms of syntactic computation are \isi{roots}
+rather than (inflectable) stems or (inflected) words \citep[5]{embick2008a}. In particular, it has become widely accepted \citep[106]{marantz2013a}
+that the Japanese \isi{suffixes} that create transitive and intransitive verb
+stems are instances of little v, causative and inchoative, that attach
+to roots and thus that the verb stems themselves are syntactic
+constructions -- much like, say, the combination of a verb stem with a
+tense element or a main verb with an auxiliary. Here, I note first that
+these claims about the constituency of Japanese verb stems rest on a
+restricted database that masks the fact that a significant number of
+stems involve sequences of two transitivity-determining suffixes. I then
+present the failure of two nested suffixes to interact in the way
+expected of syntactic elements -- in particular, the fact that an inner
+suffix must be taken as invisible for purposes of semantic
+interpretation and argument structure -- as the first of several related
+arguments casting doubt on the proposal to generate Japanese verb stems
+syntactically.
+
+The data on which DM theorists base their claim that the verbal
+derivational suffixes of Japanese are instances of little v attaching to
+roots is the appendix of \citet{jacobsen1992a}, which represents a light
+revision of the appendix of \citet{jacobsen1982a}, and in turn appears lightly
+revised as Appendix I in \citet{volpe2005a}. That appendix consists of roughly
+350 pairs of isoradical intransitive and transitive verbs presented in
+their citation forms (Imperfect/Nonpast Conclusive) and sorted into
+sixteen classes depending on the derivational suffixes that appear at
+the right edge of their stems. The fact that the Jacobsen/Volpe appendix
+is limited to verb stems presented pairwise means that using it as a
+basis for the identification of roots requires assuming for each
+transitivity pair that there are neither stems of other lexical
+categories nor verb stems outside the transitivity pair that provide
+information about the relevant root. Section~\ref{background} below, in the context of
+presenting background information on Japanese derivation, introduces a
+number of cases in which this assumption is unjustified. The following
+three sections, building on the observations of section~\ref{background}, present
+reasons for doubting that verb stems are syntactically derived. While
+for concreteness I refer throughout to the DM literature cited above and
+related work, the argumentation is intended to apply to any proposal to
+generate Japanese verb stems syntactically.
+
+Section 3, first, shows that a substantial minority of verb stems
+involve two transitivizing (T) or intransitivizing (I) suffixes (with
+the four orders TT, TI, IT, II all attested), but that an outer suffix
+must be taken to render an inner one null and void for purposes of
+argument structure and semantic interpretation. Section 4 shows that the
+same is true for the suffix pair \textit{-m-} (verbal) and \textit{-si-}
+(adjectival), with the additional complication that the order in which
+those two suffixes appear relative to a root R is an idiosyncratic
+function of R. Section 5, finally, argues against a syntactic account of
+stem formation on the basis of semantic change, claiming, for lexical
+causatives in particular, that the diachronic instability of the
+putatively compositional causative interpretation (much as if a phrase
+like \textit{kick the bucket} were to lose its compositional
+interpretation, retaining only the idiosyncratic one) shows that that
+interpretation cannot have been based on a syntactic derivation in the
+first place. In all of these cases, the behavior of the derivational
+suffixes under consideration is contrasted with that of inflectional and
+uncontroversially syntactic elements. Section 6, a brief conclusion,
+sketches two possible non-syntactic approaches to derivational
+morphology and speaker knowledge thereof and suggests that the choice
+between them for cases like the one considered here remains a topic for
+further research.
+
+\section{Background}\label{background}
+
+In considering the shortcomings of Jacobsen's \citeyearpar{jacobsen1982a,jacobsen1992a} appendix as a
+database for Japanese verbal derivation, the first thing to note is that
+the pairwise presentation of the data does not always adequately
+represent the relations of isoradicality that hold among verb stems.
+This is because a number of roots underlie three or (in at least one
+case) four verb stems rather than two; in such cases, Jacobsen either
+lists two pairs in separate places or, as we will see below, omits one
+of the stems. In several cases involving three stems on a single root,
+there are two pairs of stems differentiated at least roughly by root
+alloseme, with a formal contrast for either transitives or intransitives
+but not both. For example, the difference between the allosemes `solve'
+and `dissolve, melt' of the root \textit{tok-} corresponds to a formal
+distinction for transitives but not for intransitives, as shown in (\ref{solve})
+and (\ref{solve2}).\footnote{Below, taking the distinction between inflection and
+derivation in Japanese to be uncontroversial, I use \textit{stem} in the
+traditional meaning `morpheme (sequence) subject to inflection' and cite
+bare stems rather than inflected forms; ``(i)'' and ``(t)'' in glosses
+indicate intransitive and transitive meanings, respectively.}
+
+
+\ea\label{solve}
+	\ea \textit{tok-e-} `be solved' 
+	\ex \textit{tok-} `solve'
+	\z
+
+\ex\label{solve2} 
+	\ea \textit{tok-e-} `melt (i)'
+	\ex \textit{tok-as-} `melt (t)'
+	\z
+\z
+In other cases, as in (\ref{connect}) and (\ref{float}), there is no alloseme-dependent
+pairing, simply a triplet of isoradical stems.
+\ea\label{connect}
+	\ea \textit{tunag-ar-} `be connected'
+	\ex \textit{tunag-e-} `connect (t)'
+	\ex \textit{tunag-} `connect (t)'
+	\z
+\ex\label{float} 
+	\ea \textit{uk-} `float (i)'
+	\ex \textit{uk-ab-} `float (i)'
+	\ex \textit{uk-ab-e-} `float (t)'
+	\z
+\z
+
+\noindent In these last two cases, the policy of pairwise listing results in one
+stem of each isoradical set (specifically, (3b) and (4a)) being left out
+of the database.
+
+In fairness to Jacobsen, it must be noted that morphological analysis
+was not his aim in compiling his appendix. Most crucially for our
+purposes, he nowhere refers to the notion ``root'', and it is only with
+\citegen{volpe2005a} DM treatment that the root becomes a central concept in
+the interpretation of the appendix data. Volpe's \citeyearpar[121 (note 27)]{volpe2005a} procedure for root extraction, however, amounts to simply peeling off
+the outermost derivational suffix and labeling the residue a root, and
+he has been followed implicitly in this practice by other DM theorists.
+
+We should observe before proceeding that there are many cases,
+illustrated by (5) below, in which Volpe's procedure does in fact yield
+a root.
+
+\ea
+	\ea \textit{nao-r-} `get better (illness, injury); get repaired'
+	\ex \textit{nao-s-} `cure; repair'
+	\z
+\z
+(5) is clearly the kind of case \citet[106]{marantz2013a} has in mind when he
+says about Japanese that ``there seems overwhelming support for
+analyzing the suffixes signaling either the lexical causative as opposed
+to the inchoative or the inchoative as opposed to the lexical causative
+as realizations of a little \textit{v} head attaching to the root.'' As we
+will now see, however, there are a number of respects in which the
+properties of (5) do not generalize to the Japanese derivational system
+as a whole. Most crucially, there is reliable evidence for a number of
+Volpe's ``roots'' that they are actually morphologically complex, with
+the result that many verb stems contain two derivational suffixes rather
+than one. Given that, as we have already noted, Volpe's procedure for
+root extraction involves no attempt to compare verb stems with stems of
+other lexical classes or with verb stems outside the transitivity pair
+under consideration, this result is unsurprising. Let us examine a few
+representative cases.
+
+Consider the sequence \textit{tunag-} of (3) above. Comparison of that
+sequence, roughly meaning `connect', with the noun \textit{tuna} `rope'
+suggests that the former is undersegmented, and in particular that the
+transitive stem \textit{tunag-} consists of the noun stem \textit{tuna} (or
+the root that underlies it) suffixed with \textit{-g-.} This suggestion is
+confirmed when we observe that \textit{-g-} is suffixal in a number of
+other stems as well, with a core subset ((6)-(7) below and the three of
+note 3) displaying a very specific semantics: \textit{-g-} takes as input
+a noun stem denoting a tool T and returns a verb stem with the meaning
+``to make typical use of T''. Three examples that occasion
+resegmentation of entries of the Jacobsen/Volpe appendix are given in
+(6) through (8), with both a transitive and an intransitive stem noted
+in each case.\footnote{Three further examples whose status in the
+  contemporary language might be thought questionable are \textit{tumu-g-}
+  `spin (thread)' (\textit{tumu} `spindle'), \textit{ha-g-} `fletch (arrow)'
+  (\textit{ha} `feather'), and, with an irregular alternation of \textit{t}
+  with \textit{s,} \textit{husa-g-} `cover, stop up' (\textit{huta} `cover').}
+\ea
+	 \ea \textit{tuna} `rope'
+	 \ex \textit{tuna-g-} `tie together, tie up'
+	 \ex \textit{tuna-g-ar-} `get connected'\footnote{Kunio Nishiyama (personal
+  	communication) suggests the possibility that \textit{-g-} in (6) is a
+  	(transitivity-neutral) verbalizer, with the transitivity of (6b)
+  	resulting from a null transitivizer parallel to the intransitive
+  	\textit{-ar-} of (6c). A fully general form of this proposal will
+  	require the postulation of a very large number of morphological zeros.}
+	\z
+\ex 
+	 \ea \textit{to(-isi)} `whetstone'
+	 \ex \textit{to-g-} `whet'
+	 \ex \textit{to-g-ar-} `become pointed'
+	\z
+\ex 
+	 \ea \textit{mata} `crotch, fork'
+	 \ex \textit{mata-g-} `step over, straddle (t)'
+	 \ex \textit{mata-g-ar-} `straddle (i)'
+	\z
+\z
+The derivational relationships postulated in (6)-(8) appear
+unimpeachable in both formal and semantic terms: the roots are
+nonalternating, and the semantic relationship between nominal and verbal
+meanings is unmistakable.
+
+More common as a stem-forming suffix than \textit{-g-} is \textit{-m-,}
+which can be shown to be a stem formant in several dozen verbs. (9)-(11)
+display three cases in which recognition of suffixal \textit{-m-} forces
+resegmentation of strings that Volpe takes to be roots (the (a) items of
+(9) and (10) are adjective stems, and that of (11) is an adjectival
+noun, a stem with adjectival meaning but essentially nominal
+inflection).
+\ea
+	 \ea \textit{ita-} `painful'
+	 \ex \textit{ita-m-} `be painful, get injured'
+	 \ex \textit{ita-m-e-} `injure'
+	\z
+\ex 
+	 \ea \textit{yuru-} `slack'
+	 \ex \textit{yuru-m-} `slacken (i)'
+	 \ex \textit{yuru-m-e-} `slacken (t)'
+	\z
+\ex
+	 \ea \textit{hiso-ka} `stealthy, secret'
+	 \ex \textit{hiso-m-} `be hidden, lurk'
+	 \ex \textit{hiso-m-e-} `conceal, mask'
+	\z
+\z
+We have seen that in addition to verb stems formed with the common
+suffixes \textit{-r-} and \textit{-s-,} illustrated in (5), there are verb
+stems formed with \textit{-g-} and \textit{-m-.} In fact, of the nine
+occurring stem-final consonants, all but \textit{n} can be shown to be
+suffixal in some stems. Suffixal \textit{-b-} has been illustrated in (4b)
+above; (12) through (14) display one example each for \textit{-k-,}
+-\textit{t-,} and \textit{-w-} (\textit{w} deletes in the phrasal phonology
+before nonlow vowels; here and below, I take reference to a suffix
+-C(V)- to subsume reference to its post-consonantal allomorph -aC(V)-).
+
+\ea
+	 \ea \textit{na-k-} `make characteristic sound' (animal); `weep' (human)
+	 \ex \textit{na-r-} `sound (i)' (inanimate subject)
+	 \ex \textit{na-r-as-} `sound (t)'
+	\z
+\ex 
+	 \ea \textit{hana-re-} `move (i) away (from); be released'
+	 \ex \textit{hana-s-} `move (t) away (from); release'
+	 \ex \textit{hana-t-} `release forcefully, discharge'
+	\z
+\ex 
+	 \ea \textit{muk-} `face, look (in a direction)'
+	 \ex \textit{muk-e-} `cause to face, turn (t) (in a direction)'
+	 \ex \textit{muk-aw-} `face, proceed toward'
+	 \ex \textit{muk-aw-e-} `(go to) meet, receive (a visitor)'
+	\z
+\z
+We see, then, that the inventory of suffixes that create verb stems of
+determinate transitivity is a good deal larger than envisioned in the
+Jacobsen/Volpe appendix, where, apart from idiosyncratic formations, the
+relevant set is essentially limited to \textit{-r-}, \textit{-s-},
+\textit{-re-}, \textit{-se-}, \textit{-e-}, \textit{-i-}, and zero. In closing
+this introductory section, let us consider two semantic issues that
+arise with respect to the Jacobsen/Volpe appendix data. The first
+involves the interpretation of roots, the second the interpretation of
+suffixes.
+
+Quite apart from the question of whether or not roots are taken to be
+elements that are manipulated by the syntax, no attempt to segment stems
+into roots and suffixes synchronically is a fully grounded project in
+the absence of a criterion for isoradicality -- a criterion, that is, for
+determining when two given stems share a root and when they do not. The
+semantic lability of individual stems over time that will be illustrated
+in section 5 makes this by no means an idle question. It is, however, a
+question that neither Jacobsen nor Volpe engage with seriously; \citet[38]{jacobsen1982a}\footnote{See also note 5, p.34 and the corresponding note 30 of
+  \citealt{jacobsen1992a} (pp. 248--249).} says only that the members of a transitivity
+pair must exhibit ``a certain degree of semantic affinity'', and \citet[32]{volpe2005a} confines himself to observing that ``Root semantics is a
+wide-open area for further research''. The question of isoradicality is
+essentially coextensive with the traditional problem of distinguishing
+homophony from polysemy, a problem that may ultimately be illuminated by
+psycholinguistic and neurolinguistic research (see \citealt[103]{marantz2013a}). It
+is worth keeping in mind, however, that any program involving the
+synchronic identification of roots requires innumerable provisional
+decisions on this matter.
+
+Turning now to the interpretation of the stem-forming suffixes of which
+we have seen a number of examples, let us note first that while \citet{volpe2005a} follows \citet{jacobsen1982a,jacobsen1992a} in referring to the two members of
+a transitivity pair as ``intransitive'' and ``transitive'', more recent
+literature such as \citet{harley2008a,harley2012a} and \citet{marantz2013a} use the more
+specific ``inchoative'' and ``causative''. In fact, cases like
+\textit{ka-r-} (Western Japan; cf. Eastern \textit{ka-ri-}) `borrow' versus
+\textit{ka-s-} `lend' and \textit{azuk-ar-} `take on deposit' versus
+\textit{azuk-e-} `deposit' show that even the former pair of terms is too
+specific to be accurate in general. This is because the first member of
+each of those pairs shows ``intransitive'' morphology in spite of
+displaying what, under Burzio's generalization, are the twin hallmarks
+of causative little v, namely an agentive external argument and
+accusative case-marking. Cross-linguistic parallels\footnote{See \citet[59, 84--85, 107]{kuo2015a} for the Taiwanese languages Amis, Puyama, and Seediq, respectively; other languages for which the relationship can
+  be easily verified include Tagalog and Swahili.} suggest that the
+treatment of `borrow' as the intransitive counterpart of `lend' is by no
+means accidental or exceptional. The phenomenon of a stem with causative
+meaning but ``intransitive'' morphology appears to show that if the
+semantics of the two morphological types are specified separately, they
+will have to overlap. Let us briefly note another type of example that
+suggests the same conclusion.
+
+The stems \textit{too-r-} `pass through' and \textit{mata-g-} `step over,
+pass over, straddle' ((8b) above) are closely parallel in both their
+semantics and their case-marking. When the subject is animate, as in
+(15) (where stem-internal segmentation is suppressed), that subject
+(marked nominative but omitted in the examples) is both an agent and a
+theme moving along a path, and the accusative object is an intermediate
+point on that path.
+\ea
+	\ea 
+	\gll Syootengai o toot-te eki ni modot-ta.\\
+	shopping.district \textsc{acc} pass.through-\textsc{cj} station \textsc{dat} return-\textsc{pf}\\
+	\glt ``I passed through the shopping district and returned to the station.''
+
+	\ex 
+	\gll Saku o matai-de hodoo ni hait-ta. \\
+	barrier \textsc{acc} step.over-\textsc{cj} sidewalk \textsc{dat} enter-\textsc{pf}\\
+	\glt ``I stepped over the barrier and onto the sidewalk.''
+	\z
+\z
+In other uses, the agent of examples (15) may be replaced by an
+inanimate theme, with \textit{matag-} in the meaning ``pass over'', or by
+a path argument, as in \textit{The road passes through the tunnel/over the
+train tracks.}
+
+In spite of the close semantic parallelism between \textit{too-r-} and
+\textit{mata-g-}, however, the two stems differ in their transitivity
+status: \textit{too-r-} is the intransitive corresponding to transitive
+\textit{too-s-} `pass though (t)', while \textit{mata-g-} is the transitive
+corresponding to intransitive \textit{mata-g-ar-} `straddle' ((8c) above),
+the latter differing from \textit{mata-g-} in taking a dative rather than
+an accusative object. Unless \textit{too-r-} and \textit{mata-g-} are
+semantically distinct in a way we have failed to identify, this fact
+shows that the transitivity status of a stem cannot be a function of
+that stem's semantics alone, and a fortiori cannot be a function of the
+semantics of that stem's suffix. An alternative possibility, which
+considerations of space preclude developing here, is that there is a
+continuum of degrees of transitivity, as suggested by \citet{hopper1980a} and subsequent work, and that what transitivity pairs
+have in common is that the ``transitive'' member has a higher degree of
+transitivity than the ``intransitive'' member.\footnote{\citet[73--74]{jacobsen1992a} develops a scalar concept of transitivity but does not suggest that the common point of transitivity pairs is a transitivity
+  differential in favor of the morphologically transitive member.} In
+any case, however, the evidence we have seen here is sufficient to
+establish that there is no simple, general account of the semantics of
+the suffixes that create transitivity-specific Japanese verb stems, and
+that, as was the case regarding the question of a criterion for
+isoradicality, much work remains to be done in this area.
+
+Above, we have seen that the data of the Jacobsen/Volpe appendix is a
+good deal more complex and irregular, both formally and semantically,
+than consideration of examples like (5) might suggest. Nothing in the
+present section, however, is intended as an argument for or against any
+particular treatment of that data. Taking our discussion of the
+Jacobsen/Volpe appendix as a starting point, we now turn, in sections 3
+through 5, to arguments against proposals to generate Japanese verb
+stems syntactically.
+
+\section{Sequences of verbal suffixes}\label{sequences}
+
+As we have already noted, one consequence of the resegmentations that
+are entailed by comparing the stems that participate in transitivity
+pairs with stems of other lexical categories (as well as with other verb
+stems) is that many stems can be seen to display a sequence of two
+suffixes attached successively to a root rather than a single
+transitivity-determining suffix. For example, the (c) examples of (6)
+through (8) above all involve the sequence \textit{-g-ar-,} where the
+first suffix creates a transitive stem and the second an intransitive.
+Similarly, the (c) examples of (9) through (11) all involve
+\textit{-m-e-,} where the first suffix creates an intransitive stem and
+the second a transitive. Suffix sequences are also observed in (12c) and
+(14d).
+
+Sequences of two transitivizing suffixes and two intransitivizing
+suffixes are observed as well. For example, (16d) below, where (16) is
+an expansion of (6), involves the sequence \textit{-g-e-,} where both
+suffixes create transitive stems, and (17c) involves the sequence
+\textit{-m-ar-,} where both suffixes create intransitive stems.
+\ea
+	 \ea \textit{tuna} `rope'
+	 \ex \textit{tuna-g-} `tie together, tie up'
+	 \ex \textit{tuna-g-ar-} `get connected'
+	 \ex \textit{tuna-g-e-} `tie together, connect'
+	\z
+\ex 
+	 \ea \textit{yasu-raka} `peaceful, calm'
+	 \ex \textit{yasu-m-} `rest (i)'
+	 \ex \textit{yasu-m-ar-} `become rested, at ease'
+	 \ex \textit{yasu-m-e-} `rest (t)'
+	\z
+\z
+Recall now the DM claim that Japanese transitivity-determining suffixes
+are instances of little v, with at least an inchoative and a causative
+``flavor'' \citep[107]{marantz2013a} to be distinguished. Abstracting away from
+the fact that (at a minimum) both types of little v will have to be
+polysemous, and writing the inchoative version as ``v\textsubscript{i}''
+and the causative version as ``v\textsubscript{c}'', the structure of
+the two stems of (5), for example, will be as shown in (18) (simplified
+glosses given) .
+\ea
+	\ea \textit{nao-r-} {[}{[}R{]}v\textsubscript{i}{]} `get better'
+	\ex \textit{nao-s-} {[}{[}R{]}v\textsubscript{c}{]} `make better'
+	\z
+\z
+In the same way, the structure of the stems (16c-d) will be as in
+(19), and that of the stems (17c-d) will be as in (20). (Here and
+below, I take the fact that \textit{-g-} and \textit{-m-} (and also
+\textit{-b-, -k-, -t-, -w-}) in isolation are entirely parallel in
+function to the suffixes the DM literature treats as little v (notably
+\textit{-r-, -s-,} and \textit{-e-} (see e.g. \citealt[108]{marantz2013a})) to license
+a parallel treatment for them in the DM framework we are taking as
+representative of syntactic treatments of derivation.)
+\ea
+	\ea \textit{tuna-g-ar-} {[}{[}{[}R{]}v\textsubscript{c}{]}v\textsubscript{i}{]} `connect (i)'
+	\ex \textit{tuna-g-e-} {[}{[}{[}R{]}v\textsubscript{c}{]}v\textsubscript{c}{]} `connect (t)'
+	\z
+\ex 
+	\ea \textit{yasu-m-ar-} {[}{[}{[}R{]}v\textsubscript{i}{]}v\textsubscript{i}{]} `get rested'
+	\ex \textit{yasu-m-e-} {[}{[}{[}R{]}v\textsubscript{i}{]}v\textsubscript{c}{]} `rest (t)'
+	\z
+\z
+If the representations of (19)-(20) are constructed in the syntax, in
+line with the proposal that roots and functional morphemes are the
+primitives of syntactic derivation, we will expect them to be
+interpreted compositionally, with the meaning of the outer little v
+combining with the result of composing the meaning of the inner little v
+with that of the root. In fact, no verb stem has an interpretation that
+involves two units of ``little v meaning'', either two instances of
+`inchoative' or two instances of `causative' or one of each; for
+interpretive purposes, the only little v that matters in representations
+like those of (19)-(20) is the outer one.\footnote{While the
+  v\textsubscript{i} of (20b) could be taken to be semantically active,
+  the meaning of such causatives would have to coincide with that of
+  causatives derived from roots, as in (18b). The semantic inertness of
+  the inner little v thus follows for this case as for the others. (In
+  DM, identification of category-determining elements with phase heads
+  requires that lexical causatives, being monophasal, be root-based
+  \citep{marantz2007a}.)} This is as if, when the Perfect auxiliary occurs
+outside of the Progressive in English or the Passive outside of the
+(productive) Causative in Japanese, as illustrated in (21), the outer
+auxiliary were to nullify the interpretation of the inner one rather
+than composing with it semantically.
+\ea
+	\ea have been eating { } {[}PERF{[}PROG{[}V{]}{]}{]}
+	\ex \textit{tabe-sase-rare-} { } {[}{[}{[}V{]}CAUS{]}PASS{]} `be made to eat'
+	\z
+\z
+It would seem that in uncontroversially syntactic constructions like
+those of (21), this kind of nullification never occurs, and thus that we
+can assume that the syntactic computational system includes no mechanism
+for opting out of compositional interpretation in this way. The
+structures of (19)-(20) therefore pose a major problem for the idea that
+the suffixes deriving Japanese verb stems are syntactic elements.
+
+We have seen that the syntactic status of constructions like (19)-(20)
+is called into question by their interpretive properties. The
+representations of (19) pose a second problem as well, namely that the
+internal v\textsubscript{c} will introduce an external argument that
+must ultimately remain unrealized.\footnote{The causative interpretation
+  and the external argument may in fact be introduced by separate heads \citep[chapter 3]{pylkka2008a}; what is important for our purposes is that in the data at hand they are both present when a transitivizing
+  suffix appears alone but absent when it appears inside another
+  transitivity-determining suffix.} In the remainder of this section, I
+concentrate on documenting further instances of the construction (19a),
+verb stems that introduce no external argument in spite of containing a
+transitivizing suffix.
+
+Consider first the isoradical sets (22)-(25), all of which illustrate
+the suffix sequence \textit{-r-e-.}\footnote{Taking the root to be
+  \textit{maku-} in (22) obviates postulating a new suffix allomorph for
+  the b. and c. examples but requires a rule deleting a root-final vowel
+  in a zero-derived verb stem for (22a). Given also a rule \textit{a} +
+  \textit{i} \textgreater{} \textit{e,} mirroring the presumed historical
+  development (see \citealt{ono1953a}  and subsequent literature), many apparently
+  consonant-final roots could be reanalyzed along parallel lines; for
+  example, the stems of (1)-(2) above could be \textit{tok-,}
+  \textit{toka-i-, toka-s-} (√toka) rather than \textit{tok-, tok-e-,}
+  \textit{tok-as-} (√tok).}
+\ea
+	 \ea \textit{mak-} `roll up, wind around'
+	 \ex \textit{maku-r-} `roll up, tuck up'
+	 \ex \textit{maku-r-e-} `get turned up, ride up'
+	\z
+\ex 
+	 \ea \textit{nezi} `screw'
+	 \ex \textit{nezi-r-} `twist'
+	 \ex \textit{nezi-r-e-} `get twisted'
+	\z
+\ex  
+	 \ea \textit{yabu-k-} `rip (t)'
+	 \ex \textit{yabu-r-} `rip (t)'
+	 \ex \textit{yabu-r-e-} `rip (i)'
+	\z
+\ex 
+	 \ea \textit{kasu-ka} `faint, at the limits of perception'
+	 \ex \textit{kasu-m-} `become hazy, dim'
+	 \ex \textit{kasu-m-e-} `cloud (the vision of), deceive; graze, skim over; skim off, steal'
+	 \ex \textit{kasu-r-} `graze (touch lightly in passing)'
+	 \ex \textit{kasu-r-e-} `become faint or discontinuous (printing, writing); become hoarse (voice)'
+	\z
+\z
+The stems of (22)-(25) are all in common use in contemporary Japanese; a
+final parallel set that is particularly transparent semantically but for
+which the verb stems are obsolete is \textit{kubi} `neck', \textit{kubi-r-}
+`strangle', \textit{kubi-r-e-} `die by hanging oneself'.
+
+Examples of the construction (19a) involving the suffix sequence
+\textit{-m-ar-} can also be cited, as in (26)-(28). (26a) reflects the
+fact, not previously exemplified, that bare roots not infrequently occur
+reduplicated as adverbial items of the mimetic vocabulary.
+\ea
+	 \ea \textit{kurukuru} `round and round (rotation, winding)'
+	 \ex \textit{kur-} `reel in, wind'
+	 \ex \textit{kuru-m-} `wrap by rolling'
+	 \ex \textit{kuru-m-ar-} `be rolled up, wrapped up'
+	 \ex \textit{kuru-m-e-} `lump together'
+	\z
+\ex 
+	 \ea \textit{tuka} `hilt, handle'
+	 \ex \textit{tuka-m-} `grasp' (accusative object)
+	 \ex \textit{tuka-m-ar-} `be caught, captured'; `hold on to' (dative object)
+	 \ex \textit{tuka-m-aw-e-} `catch, capture'
+	\z
+\ex
+	 \ea \textit{haza-ma} `gap, interstice' (\textless{} \textit{hasa-ma} (\textit{ma} `interval'))
+	 \ex \textit{hasa-m-} `insert between'
+	 \ex \textit{hasa-m-ar-} `get caught between'
+	\z
+\z
+In (6)-(8) and (22)-(28), then, we have seen examples in which
+intransitivizing suffixes appear outside transitivizing suffixes,
+resulting in stems of the shape (19a). These are structures for which,
+as a result of the internal v\textsubscript{c}, both a causative
+interpretation and an external argument are predicted, but do not
+materialize. We have already argued that the syntactic status of all
+four constructions (19)-(20) is called into question by the fact that
+the inner little v of those constructions is never interpreted.
+Regarding the unrealized external argument of stems of the shape (19a),
+similarly, it is clear that there is no way, in a system of syntactic
+derivation based on selectional features and the Merge operation and
+restricted by a ``no tampering'' condition \citep[138]{chomsky2008a}, for a
+specifier introduced by one head to be deleted or ignored as a
+consequence of merger of a higher head. The conclusion seems
+inescapable, then, that a system of stem-formation that allows stems of
+the form (19a), and stems of the form (19)-(20) more generally, cannot
+be the result of the syntactic computational system.
+
+\section{Verbal \textit{-m-} and adjectival \textit{-si-}}\label{verbal}
+
+In (19)-(20) above, we saw that transitivizing and intransitivizing
+suffixes, characterized as v\textsubscript{c} and v\textsubscript{i}
+respectively, can occur in any of the four logically possible orders
+following a root. We have not seen any examples, however, in which the
+members of an individual pair of suffixes appear in a given order after
+one set of roots but in the opposite order after another set. For
+example, the suffixes of the sequence \textit{-g-e-} always occur in that
+order regardless of their status as transitivizing or intransitivizing.
+In fact, there are three possibilities in that regard: both suffixes can
+be transitivizing, as in (16d), the first can be intransitivizing and
+the second transitivizing, as in \textit{yawa-ra-g-e}- `soften (t)' (cf.
+\textit{yawa-ra-g-} `soften (i)'), or the first can be transitivizing and
+the second intransitivizing, as in \textit{hisya-g-e-} $\sim$ \textit{hisi-g-e-}
+`be crushed' (cf. \textit{hisya-g-} $\sim$ \textit{hisi-g-} `crush'). In this
+section we will observe two suffixes, one deriving verb stems and the
+other adjective stems, for which there are four modes of attachment to a
+root: direct affixation of each suffix, verbal suffix preceding
+adjectival, adjectival suffix preceding verbal, and both orders with the
+same root. It will be argued that both the fact that only the outer
+suffix is interpreted, parallel with what we saw in section 3, and the
+fact that the relative position of the suffixes is an idiosyncratic
+function of the individual root militate against treating the suffixes
+as syntactic elements.
+
+Many Japanese roots support both a verb stem in \textit{-m-,} exemplified
+in section 3, and an adjective stem formed with the suffix \textit{-si-.}
+While adjective stems in \textit{-si-} are not treated in the DM
+literature on Japanese derivation, that suffix has a natural DM analysis
+as a category-determining little a, where the latter is a stative
+counterpart of inchoative v\textsubscript{i} and causative
+v\textsubscript{c} \citep[103]{marantz2013a}. In the examples of (29)-(30),
+both suffixes attach directly to a root, making those examples parallel,
+as the displayed structure shows, to the verb stems \textit{nao-r-} and
+\textit{nao-s-} that we saw in (5) and (18) (the root of (30) also
+supports a stem \textit{kuy-i-} that is a close synonym of (30b); \textit{y}
+deletes before a front vowel in the phrasal phonology).
+\ea
+	\ea \textit{suzu-si-} {[}{[}R{]}a{]} `cool, refreshing'
+	\ex \textit{suzu-m-} {[}{[}R{]}v\textsubscript{i}{]} `cool off, refresh oneself'
+	\z
+\ex 
+	\ea \textit{kuy-asi-} {[}{[}R{]}a{]} `causing chagrin, regret'
+	\ex \textit{kuy-am-} {[}{[}R{]}v\textsubscript{c}{]} `rue, regret'
+	\z
+\z
+There are a number of roots supporting both types of stem seen in
+(29)-(30), however, for which the verb stem in \textit{-m-} is derived
+from the adjective stem in \textit{-si-.} This is illustrated in (31)-(32)
+(I take \textit{-si-} to be suffixal in an otherwise unsegmentable
+CVCV\textit{si-} adjective stem).
+\ea
+	\ea \textit{kuru-si-} {[}{[}R{]}a{]} `painful, uncomfortable, difficult'
+	\ex \textit{kuru-si-m-} {[}{[}{[}R{]}a{]}v\textsubscript{i}{]} `suffer'
+	\z
+\ex 
+	\ea \textit{kana-si-} {[}{[}R{]}a{]} `sad'
+	\ex \textit{kana-si-m-} {[}{[}{[}R{]}a{]}v\textsubscript{i}{]} `grieve, sorrow'
+	\z
+\z
+And there are roots for which, in contrast, the verb stem in \textit{-m-,}
+whether transitive (as in (33b)) or intransitive (as in (34b)) serves as
+the base for derivation of the adjective stem in \textit{-si-}:\footnote{For
+  an English parallel to the three types (29)-(30), (31)-(32), (33)-(34),
+  consider \textit{ambigu-ous/ity, duplic-it-ous, monstr-os-ity.}}
+\ea
+	\ea \textit{uto-} {[}{[}R{]}a{]} `distant, ill-informed'
+	\ex \textit{uto-m-} {[}{[}R{]}v\textsubscript{c}{]} `shun, ostracize'
+	\ex \textit{uto-m-asi-} {[}{[}{[}R{]}v\textsubscript{c}{]}a{]} `unpleasant, repugnant'
+	\z
+\ex 
+	\ea \textit{ita-} {[}{[}R{]}a{]} `painful'
+	\ex \textit{ita-m-} {[}{[}R{]}v\textsubscript{i}{]} `be painful; get damaged'
+	\ex \textit{ita-m-asi-} {[}{[}{[}R{]}v\textsubscript{i}{]}a{]} `pitiable, pathetic'
+	\z
+\z
+Finally, there is at least one root for which both the verb stem in
+\textit{-m-} and the adjective stem in \textit{-si-} contain both suffixes,
+in the opposite order in the two cases:
+\ea
+	\ea \textit{tutu-m-asi-} {[}{[}{[}R{]}v\textsubscript{c}{]}a{]} `modest, unpretentious'
+	\ex \textit{tutu-si-m-} {[}{[}{[}R{]}a{]}v\textsubscript{c}{]} `be cautious regarding; abstain from'
+	\z
+\z
+What conclusions can we draw from the data of (29)-(35)? First of all,
+with regard to interpretation, those examples support the same
+observation that was made in section 3 for stems of the four types in
+(19)-(20), namely that when a stem contains two derivational suffixes,
+the inner one is interpretively inert.\footnote{While one might imagine
+  for some of the doubly suffixed stems of (31)-(35) that the
+  interpretation of the whole depends in some way on that of the inner
+  suffix, there is evidence against this idea in some cases. With
+  respect to (34), for example, the root-reduplicated adjective
+  \textit{itaita-si-} `pitiable, pathetic' shows that the occurrence of
+  that meaning for the stem \textit{ita-m-asi-} has nothing to do with the
+  inner suffix \textit{-m-.}} The semantic relations of the two stems to
+each other and to the root in (35), for example, are roughly the same as
+in (29)-(30), even though the stems of (35) each contain two suffixes
+and the stems of (29)-(30) only one. This observation, as we have seen,
+casts doubt on the proposal that the suffixes in question are syntactic
+elements.
+
+A parallel argument can be made regarding the relative position of
+suffixes. (19)-(20) have already shown, of course, that if suffixes are
+divided into transitivizing (``causative'') and intransitivizing
+(``inchoative'') types, there are no constraints on their relative order
+when two of them occur in the same stem, so that their actual order in
+particular cases becomes a function of the individual root. As suggested
+by the discussion of the suffix sequence \textit{-g-e-} at the beginning
+of this section, though, if we classify suffixes on strictly
+distributional grounds, without reference to transitivity value, it is
+possible to set up two position classes that will obviate conditioning
+of suffix order by roots in the great majority of cases: roughly
+speaking, the suffixes recognized by the Jacobsen/Volpe segmentation of
+stems will belong to the outer layer, with the inner layer being
+composed of suffixes such as \textit{-g-, -m-, -w-,} and
+(transitivity-neutral) \textit{-r-.}
+
+For the data of (29)-(35), however, conditioning of suffix order by
+individual roots is inescapable. This, then, constitutes a second way,
+independent of the interpretive inertness of the inner suffix, in which
+the behavior of \textit{-m-} and \textit{-si-} fails to conform to what we
+would expect of syntactic elements. Returning to the analogy with
+auxiliary verbs that we appealed to in section 3 (see (21) above), the
+positional relations of those two suffixes are as if the Perfect and the
+Progressive auxiliaries (say) both appeared adjacent to the stem for one
+class of verbs, but the Perfect was formed by placing the Perfect
+auxiliary outside the Progressive for a second class of verbs, and the
+Progressive was formed by placing the Progressive auxiliary outside the
+Perfect for a third class. The reason, of course, that this is difficult
+to imagine is that we expect unambiguously syntactic elements to appear
+in a fixed order with respect to a verbal or nominal stem. Indeed, since
+the 1990s, a great deal of work in cartographic syntax (notably \citealt{cinque1999a}) has developed the idea that the (hierarchical) ordering of
+syntactic functional heads is fixed not only internally to a single
+language, but universally. From that perspective, the radical failure of
+Japanese verbal \textit{-m-} and adjectival \textit{-si-} to display a
+consistent ordering makes it extremely difficult to view them as
+syntactic heads.
+
+\section{Compositional meanings and semantic change}\label{composition}
+
+We have claimed that the syntactic computational system includes no
+mechanism for opting out of compositional interpretation, in particular
+by allowing a higher head to nullify the interpretation of a lower one.
+More generally, it seems reasonable to assume that the compositional
+interpretation of structures generated by the syntax is automatic, so
+that there is no way to block the compositional interpretation of a
+syntactic constituent.\footnote{I will assume that this principle is not
+  compromised by the delayed transfer to the interfaces characteristic
+  of phase-based derivation \citep{chomsky2001b}.} We expect it to be true, in
+other words, that no instance of a syntactically generated structure or
+construction can idiosyncratically fail to display the compositional
+semantic interpretation associated with that structure or
+construction.\footnote{Correspondingly, establishing that some phrase P
+  is a counterexample to this principle will require (a) displaying P's
+  syntactic structure; (b) displaying the rule of interpretation
+  associated with that structure; and (c) showing that P
+  idiosyncratically lacks the predicted interpretation.} As a result, a
+phrase like \textit{kick the bucket} that is demonstrably generated by the
+syntax will automatically have the compositional interpretation
+predicted by its lexical items and its syntactic structure,
+independently of whether it has one or more listed interpretations as
+well. As a diachronic corollary, we can infer that loss of the
+compositional interpretation of a syntactically generated constituent is
+not a possible change, assuming that the grammar and the lexicon have
+remained stable in the relevant respects. Thus, it would not be possible
+for \textit{kick the bucket} to lose its compositional interpretation over
+time, retaining only the idiomatic one. When a phrase that was once
+generated by the syntax does have only a listed interpretation, it is
+either because the component words have dropped out of the lexicon, as
+is probably the case for the phrase \textit{to plight one's troth} for
+most contemporary English speakers, or because the grammar no longer
+generates phrases of the type in question, as is the case for the phrase
+\textit{till death do us part.}
+
+What is true for manifestly phrasal constituents is true for inflected
+forms as well. Lexicalization (i.e. idiomatization) of \textit{guts} in
+the meaning `courage' and \textit{balls} in the meaning `audacity' has no
+effect on the status of those forms as regular plurals as long as the
+relevant stems and the rules for forming and interpreting plurals are
+diachronically stable. In Japanese, many verbal Gerund forms in
+\textit{\nobreakdash-te} are lexicalized as adverbs: \textit{sitagatte, yotte}
+`consequently' (\textit{sitagaw-} `obey', \textit{yor-} `be due to'),
+\textit{kiwamete, itatte} `extremely' (\textit{kiwame-} `reach, carry to
+extremity', \textit{itar-} `reach'). As long as the relevant verb stems
+remain in the lexicon and \textit{-te} remains an inflectional suffix,
+however, there is no way that these idiomatic meanings can replace the
+compositional meanings that the forms have by virtue of their
+inflectional (ultimately, syntactic) status. The same is true of verbal
+Conjunctive forms that have been lexicalized as nouns: \textit{nagasi}
+`sink' (\textit{naga-s-} `make flow'), \textit{nagare} `flow, course of
+events' (\textit{naga-re-} `flow').\footnote{The semantics of these nouns
+  has been treated in the DM literature since \citet{volpe2005a} as involving
+  selection of root allosemes by a noun-forming suffix (``special
+  meanings of the root triggered across the little \textit{v} head'' \citep[107]{marantz2013a}). The extreme semantic distance that separates many of the nouns from their corresponding roots (abundantly documented by
+  Volpe), however, makes idiom-formation a more plausible basis for the
+  nominal meanings than alloseme choice (for the distinction between the
+  two mechanisms, see \citealt[105]{marantz2013a}).}
+
+If loss of a compositional interpretation is not a possible semantic
+change, assuming stability of grammar and lexicon, then demonstrating
+that the predicted compositional meaning of a putatively syntactic
+construction is subject to loss over time will support the conclusion
+that the construction in question is not syntactic after all, since if
+it were, its compositional meaning should be diachronically stable. In
+the present section, I will make this argument with respect to the
+Japanese lexical causative in \textit{-s-,} exemplified by stems like
+\textit{nao-s-} `cure, repair', seen in (5b) and (18b) above.
+Specifically, I will document a number of cases in which the
+construction {[}R{[}\textit{s}{]}{]} can be shown to have had the predicted
+interpretation CAUS(ǁRǁ) (ǁRǁ the interpretation of R) originally but
+later to have lost that interpretation in spite of the fact that ǁRǁ
+itself has remained constant.
+
+As a first example, consider the stem \textit{yurus-} `allow, forgive'. In
+Old Japanese (see \citealp{omodaka1967a}), the primary meaning of this stem
+is `slacken (t)', with secondary meanings `let go of'; `allow, comply
+with, tolerate'; and `forgive, exempt'. \textit{Yurus-,} in other words,
+is historically the causative in \textit{-s-} on √yuru `slack' (see (10)
+above), a root that in modern Japanese underlies the adjective stem
+\textit{yuru-} `slack', the nominal adjective \textit{yuru-yaka} `slack,
+gradual', and the verb stems \textit{yuru-m-} `slacken (i)' and
+\textit{yuru-m-e-} `slacken (t)'. As is clear from these four stems, the
+root has been completely stable semantically over thirteen centuries,
+and the same can be assumed for causative \textit{-s-.} There is no trace
+in the modern meaning of \textit{yurus-,} however, of the original
+concrete primary meaning `slacken'. That meaning, in other words, has
+been completely replaced by the originally secondary or extended
+meanings `allow' and `forgive'. If \textit{yuru-s-} had been a syntactic
+construction, with the meaning `slacken (t)' the compositional result of
+a semantic rule of interpretation, this replacement should have been
+impossible, just as we have suggested that it would be impossible for
+\textit{kick the bucket} to lose its compositional meaning and retain only
+the idiomatic one.
+
+The history of the stem \textit{itas-} `do (humble)' is broadly parallel.
+In Old Japanese, it is the causative corresponding to \textit{itar-}
+`reach a limit', as explicitly noted in \citet{omodaka1967a}, and thus
+means `bring to a limit'. In the modern language, while intransitive
+\textit{itar-} has retained its original meaning, \textit{itas-} is for the
+most part, bleached of concrete content, simply a suppletive humble
+variant of \textit{suru} `do'. A third case in which a \textit{s-}stem has
+lost a putatively compositional causative meaning involves \textit{konas-}
+`deal with, take care of; be skilled at', whose primary meaning was
+originally `break up, pulverize' and which is based historically on
+\textit{ko} `powder' \citep{ono1974a}. Like many other original monosyllables,
+\textit{ko} has been replaced as a freestanding noun by a bisyllabic form,
+in this case \textit{kona,} which is attested starting around 1700. The
+only serious proposal for the origin of \textit{kona} (see NKD) appears to
+be that it is a backformation based on \textit{konas-}. If the
+backformation theory is correct, \textit{kona} and \textit{konas-} were
+unquestionably isoradical at the relevant point in time, so that
+\textit{konas-} consisted of √kona `powder' plus causative \textit{-s-.}
+Today, however, while the root noun remains in the language, the meaning
+`break up, pulverize' for the verb is extinct.\footnote{While
+  dictionaries retain examples like \textit{tuti o konasu} `break up dirt
+  (clods)', the speakers I have consulted deny knowledge of such a
+  usage.}
+
+Two further stems in \textit{-s-} for which the predicted causative
+meaning appears to have been lost over time are \textit{hatas-} `carry
+out, perform, accomplish' and \textit{kuras-} `make a living; live, spend
+(time)'. The roots appear in the zero-derived noun \textit{hata} `edge,
+perimeter; outside' and the zero-derived adjective stem \textit{kura-}
+`dark', respectively, and are semantically identifiable in the
+intransitives \textit{hate-} `end (i)' and \textit{kure-} `darken (day), end
+(i)' (for the \textit{a} $\sim$ \textit{e} alternation, see note 11 above). The
+expected primary meaning `end (t)' of \textit{hatas-} appears in the gloss
+`bring to a conclusion' in \citet{omodaka1967a}; for \textit{kuras-,}
+similarly, \citeauthor{omodaka1967a} record the expected primary meaning `spend the
+time until evening' (i.e. `let the day darken'). In both cases, however,
+this compositional meaning is absent from the modern stems, neither of
+which stands in a purely causative relation to the corresponding
+intransitive or to the root. The meaning of \textit{hatas-,} as the above
+definition indicates, inherently includes an element of purposive
+activity (carrying out a command, achieving a goal, fulfilling an
+obligation) that is absent from that of \textit{hate-.} While the semantic
+difference between \textit{kuras-} and \textit{kure-} is more subtle, the
+basic fact preventing the former from functioning as the causative of
+the latter is that, unlike \textit{kure-} (`come to an end'),
+\textit{kuras-} (`spend (time)') is atelic. Both \textit{hatas-} and
+\textit{kuras-,} then, like \textit{yurus-, itas-, and konas-,} are cases in
+which the predicted interpretation CAUS(ǁRǁ) of the construction
+{[}R{[}\textit{s}{]}{]} has been lost over time.
+
+In this section, we have seen an argument against the syntactic
+derivation of Japanese verb stems based on semantic change, using
+causatives in \textit{-s-} as a representative stem-type. It goes without
+saying, we should emphasize, that perhaps the most common type of
+semantic change, the addition of idiomatic or extended meanings, does
+not count against the hypothesis of syntactic generation: as is well
+known, linguistic units of any size can be idiomatized, with the
+tendency to undergo idiomatization inversely proportional, roughly
+speaking, to size \citep[14]{sciullo1987a}. But loss of a
+putatively compositional meaning, we have claimed, does count against
+syntactic generation, because there is no reason to take the
+compositional interpretation of syntactic structure to be anything but
+automatic and exceptionless. In order for a compositional meaning M to
+be lost, the syntactic structure underlying it would first have to be
+exempted from compositional interpretation, with M being lexicalized at
+the same time; M could then be lost from the lexicon. If this sequence
+of events is impossible because exemptions of the required type are
+never granted, however, a putatively compositional meaning that is in
+fact subject to loss cannot have been based on a syntactic derivation in
+the first place.
+
+\section{Conclusion}\label{conclusion}
+
+Above, I have attempted to evaluate the proposal that the derivational
+suffixes that create transitive and intransitive verb stems in Japanese
+are syntactic heads, in particular varieties of little v. Crucial
+evidence in this regard has come from identifying an inner layer of
+derivational suffixation (\textit{-g-, -m-,} etc.) in addition to the
+well-known outer layer whose main members are -\textit{r-}, \textit{-s-},
+\textit{-re-}, \textit{-se-}, \textit{-e-}, \textit{-i-}, and zero, since this
+has allowed us to raise the question of how two derivational suffixes
+interact when they occur together in the same stem. We saw in section~\ref{sequences}
+that in such a case, the inner suffix is always inert for purposes of
+argument structure and semantic interpretation, casting doubt on the
+position that the suffixes are syntactic elements. In section~\ref{verbal}, we saw
+that the same is true for combinations of the verbal suffix \textit{-m-}
+and the adjectival suffix \textit{-si-,} with the added complication that
+the order in which those two suffixes occur is an idiosyncratic function
+of the root. Finally, in section~\ref{composition}, we argued, without reference to
+suffix sequences, that the combination of a root and a
+transitivity-determining suffix, taking causative \textit{-s-} as a
+representative example, cannot be a syntactic construction because its
+putatively compositional interpretation is unstable over time. All the
+evidence we have seen, then, points toward the conclusion that the
+derivational suffixes under consideration are not syntactic elements.
+Equivalently, if one wishes in the face of this evidence to generate
+Japanese verb and adjective stems syntactically, one will require
+relaxation of otherwise well-motivated constraints on structure-building
+and interpretation precisely for the domain of the stem. As suggested at
+the outset, our conclusions in this regard support Anderson's \citeyearpar[594]{anderson1982a} position on the place of morphology in the grammar: derivation is pre-syntactic, and the units of lexical storage are inflectable stems;
+inflection, in contrast, is the post-syntactic spellout of morphological
+elements and morphosyntactic properties that are treated by syntactic
+operations.
+
+The conclusion that Japanese derivational suffixes, in contrast with
+suffixes like the Passive and the productive Causative, are not
+syntactic elements is supported at a more impressionistic level by the
+fact that, as is easily confirmed, the two sets of suffixes differ
+sharply in their degree of regularity, both formal and semantic.
+Formally, while variation in the shape of the Passive suffix
+\textit{-(r)are-} is limited to phonologically conditioned alternation of
+\textit{r} with zero at the left edge, and variation in the shape of the
+Causative suffix \textit{-(s)as(e)-} is limited to phonologically
+conditioned alternation of \textit{s} with zero at the left edge and
+non-phonological alternation of \textit{e} with zero at the right,
+variation in the realization of what under a DM analysis will be
+v\textsubscript{i} and v\textsubscript{c} is highly unconstrained, with
+multiple unrelated allomorphs for each of the suffixes and almost
+complete overlap between the two allomorph sets. Semantically, while the
+meaning of Passive stems in \textit{-(r)are-} and (apart from occasional
+idioms) Causative stems in \textit{-(s)as(e)-} is both regular and
+relatively straightforward to characterize, the meaning of stems in
+v\textsubscript{i} and v\textsubscript{c} is in most cases multiply
+polysemous and highly idiosyncratic; the glosses we have given above,
+while aiming at a marginal increase in accuracy over the labels in
+\citet{jacobsen1992a} and \citet{volpe2005a}, in many cases only scratch the surface of
+the problem of specifying stem meaning. With regard to semantics, it
+should also be remembered that, as we noted in section~\ref{background}, morphological
+analysis internal to the stem proceeds on the basis of an unredeemed
+promissory note regarding the criterion for isoradicality and that
+equally serious questions arise about how the meaning of transitivity
+suffixes is to be specified, given the apparent semantic overlap between
+transitivizing and intransitivizing morphology.
+
+If Japanese verb and adjective stems are not, then, created by the
+syntactic computational system, how should we conceive of their
+structure and, crucially, the knowledge that speakers have about that
+structure? Broadly speaking, there are two types of answer that could be
+given to this question. On one of them, derivational morphology of the
+type we have seen here would be the result of a combinatory system
+roughly parallel to syntax but less regular both in terms of the
+hierarchical relationships holding among grammatical elements and the
+semantic interpretation of complex structures. From the standpoint of
+theoretical parsimony, of course, this would seem like an unattractive
+proposal; surely, if possible, we would prefer to maintain that the
+language faculty involves a ``single generative engine'' \citep{marantz2001a,marantz2005a}. Viewing language as a biological object, however, there would appear to be no grounds for excluding a priori the possibility that our linguistic capacities include a combinatory stem-formation module of the sort in question. In evolutionary terms, such a module might have
+provided a vastly expanded repertory of named concepts in advance of the
+emergence of a fully regular and productive syntax, representing a sort
+of half-way house on the road to discrete infinity.
+
+The second type of answer that could be given to the question of the
+form taken by speaker knowledge of the relations among isoradical stems,
+assuming that those relations are not mediated by the syntactic
+computational system, is that that knowledge is frankly
+non-generative -- that is, non-combinatory. In this case, all stems will
+be lexically listed, with relations among them captured by redundancy
+rules, for example, those of the type pioneered by \citet{jackendoff1975a} (see also \citealt[53]{jackendoff2002a}). What is unsatisfying about this type of answer is that it provides no insight into why derivational morphology should
+exist at all -- why, that is, stems (setting aside compounds) are not all
+atomic. While we have seen evidence that at least some derivational
+morphology cannot be syntactic, then, there is no unambiguously
+attractive alternative account of the structure of speaker knowledge in
+this area. As a result, the place of derivational morphology in our
+linguistic competence remains very much an open question.
+
+\subsection*{Acknowledgments} I would like to express my appreciation to
+Takayuki Ikezawa, in conversations with whom the idea for this paper
+emerged. I am also grateful to Kunio Nishiyama and Yoko Sugioka for
+comments on a presentation of some of this material at the 152nd meeting
+of the Linguistic Society of Japan (Tokyo, June 2016). Finally, I am
+indebted to several reviewers for comments that have resulted in a
+number of clarifications and improvements. Remaining errors of fact or
+interpretation are my responsibility.
+
+\subsection*{Abbreviations}
+\textsc{cj} `(second or perfective) conjunctive', \textsc{pf} `perfective'
+
+\nocite{unknown-a,unknown-b}
+
+\printbibliography[heading=subbibliography,notkeyword=this]
+
+
+\end{document}
+
+
