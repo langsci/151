@@ -5,6 +5,7 @@
 \usepackage{amsmath} 
 \usepackage{multicol}
 \usepackage{lipsum}
+\usepackage{csquotes} %%biblatex wants it.
 \usepackage{longtable}
 \usepackage{booktabs}
 \usepackage[normalem]{ulem}
@@ -29,7 +30,6 @@ noabbrev]% labels are always spelled out in LSP style
 %\usepackage[notcite,notref]{showkeys} %%removed, not helping CB.
 %\usepackage{showidx} %%remove for final compiling - shows index keys at top of page.
  
-\usepackage{langsci/styles/langsci-gb4e}  
  \usepackage{pifont}
 % % OT tableaux                                                
 % \usepackage{pstricks,colortab}  
@@ -37,7 +37,7 @@ noabbrev]% labels are always spelled out in LSP style
 \usepackage{rotating} %needed for angled text%
 \usepackage{colortbl} % for cell shading
  
- \usepackage{avm}  
+\usepackage{avm}  
 \usepackage[linguistics]{forest} 
 \usetikzlibrary{matrix,fit} % for matrix of nodes in Kaisse and Bat-El
 
@@ -45,7 +45,6 @@ noabbrev]% labels are always spelled out in LSP style
 \usepackage{hhline}
 \newcommand{\cgr}{\cellcolor[gray]{0.8}}
 \newcommand{\cn}{\centering}
-
 
 
 \newcommand{\reff}[1]{(\ref{#1})}
@@ -67,3 +66,11 @@ noabbrev]% labels are always spelled out in LSP style
 %\include{psheader-metr}
 
 \def\bl#1{$_{\textrm{{\footnotesize #1}}}$}
+
+\usepackage{./langsci/styles/langsci-optional}
+
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+
+\usepackage{langsci/styles/langsci-gb4e}  

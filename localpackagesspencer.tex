@@ -9,15 +9,15 @@
 \usepackage{tikz}
 
 
-\makeatletter
-\DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
-\DeclareOldFontCommand{\sf}{\normalfont\sffamily}{\mathsf}
-\DeclareOldFontCommand{\tt}{\normalfont\ttfamily}{\mathtt}
-\DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
-\DeclareOldFontCommand{\it}{\normalfont\itshape}{\mathit}
-\DeclareOldFontCommand{\sl}{\normalfont\slshape}{\@nomath\sl}
-\DeclareOldFontCommand{\sc}{\normalfont\scshape}{\@nomath\sc}
-\makeatother
+% \makeatletter
+% \DeclareOldFontCommand{\rm}{\normalfont\rmfamily}{\mathrm}
+% \DeclareOldFontCommand{\sf}{\normalfont\sffamily}{\mathsf}
+% \DeclareOldFontCommand{\tt}{\normalfont\ttfamily}{\mathtt}
+% \DeclareOldFontCommand{\bf}{\normalfont\bfseries}{\mathbf}
+% \DeclareOldFontCommand{\it}{\normalfont\itshape}{\mathit}
+% \DeclareOldFontCommand{\sl}{\normalfont\slshape}{\@nomath\sl}
+% \DeclareOldFontCommand{\sc}{\normalfont\scshape}{\@nomath\sc}
+% \makeatother
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%                                              %%%
@@ -39,13 +39,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % If you are using OT, uncomment the following lines      
 % % OT pointing hand
- \usepackage{pifont}
- \newcommand{\hand}{\ding{43}}
+%  \usepackage{pifont}
+%  \newcommand{\hand}{\ding{43}}
 % % OT tableaux                                                
 % \usepackage{pstricks,colortab}  
-\usepackage{multirow} % used in OT tableaux
-\usepackage{rotating} %needed for angled text%
-\newcommand{\rot}[1]{\begin{rotate}{90}#1\end{rotate}} %shortcut for angled text%  
+% \usepackage{multirow} % used in OT tableaux
+% \usepackage{rotating} %needed for angled text%
+% \newcommand{\rot}[1]{\begin{rotate}{90}#1\end{rotate}} %shortcut for angled text%  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%                                              %%%
@@ -67,14 +67,14 @@
 \usepackage{setspace}
 \usepackage{xcolor}
 \usepackage{amssymb} %for \varnothing
-\usepackage{multicol}
-\usepackage{multirow}
+% \usepackage{multicol}
+% \usepackage{multirow}
 
 %%%%% AVM style 
 \usepackage{avm}
 \avmoptions{active}
-\avmvalfont{\rm}
-\avmsortfont{\scriptsize\it}
+\avmvalfont{\upshape}
+\avmsortfont{\scriptsize\itshape}
 %%%%% %%%%%%%%%%%%%%%%%%%
 
 %%%%%%%  Drawing   %%%%%
@@ -83,8 +83,8 @@
 %%%%%%  Author macros %%%%%%%
 \newcommand\redmar[1]{\marginpar{\textsf{\color{red}{#1}}}}		
 
-\newcommand\textex[1]{\textit{#1}}
-\newcommand\lxm[1]{\textsc{#1}}
+% \newcommand\textex[1]{\textit{#1}}
+% \newcommand\lxm[1]{\textsc{#1}}
 \newcommand\glossfeat[1]{\textsc{#1}}
 \newcommand\featname[1]{#1}
 
@@ -105,17 +105,4 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%
 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%                                              %%%
-%%%          Trees                               %%%
-%%%                                              %%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% For trees, uncomment the following lines
 \usepackage[linguistics]{forest}
-% \usepackage{tikz-qtree}
-% % has strange side effects
-% %\tikzset{every tree node/.style={align=left, anchor=north}}
-% \tikzset{every roof node/.append style={inner sep=0.1pt,text height=2ex,text depth=0.3ex}}

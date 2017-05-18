@@ -8,19 +8,18 @@
 % Everything following a % is ignored
 % Some lines start with %. Remove the % to include them
 
+% \nonstopmode
 \documentclass[output=book
 		,modfonts
 		,nonflat
 	        ,collection
 	        ,collectionchapter 
 	        ,smallfont
-% 	        ,coverus
+	        ,multiauthors
+%            ,draft,draftmode 
 		  ]{langsci/langscibook}                              
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% put all additional commands you need in the 
-% following files. If you do not know what this might 
-% mean, you can safely ignore this section
+ 
 
 \input{localmetadata}
 \input{localpackages}
@@ -29,20 +28,26 @@
 \bibliography{localbibliography}
 \newcommand{\lsCollectionPaperFirstPage}{0}
 \newcommand{\lsCollectionPaperLastPage}{1}
+\graphicspath{{./figures/}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%                                              %%%
 %%%             Frontmatter                      %%%
 %%%                                              %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{etoolbox} % to fix bibliography stuff
+\apptocmd{\sloppy}{\hbadness 10000\relax}{}{}
+
+
 \begin{document}         
 \maketitle                
-\frontmatter
+\frontmatter %%restore
 % %% uncomment if you have preface and/or acknowledgements
 
 \currentpdfbookmark{Contents}{name} % adds a PDF bookmark
-\tableofcontents
-\include{chapters/preface}
-% \include{chapters/acknowledgments}
+\tableofcontents  %%restore prior to final compiling
+\include{chapters/preface} %%restore
+%\include{chapters/acknowledgments}
 
 \mainmatter          
 
@@ -52,56 +57,44 @@
 %%%                                              %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  
-  
-% \includepaper{chapters/aissen}
-% \includepaper{chapters/aronoff}
-% \includepaper{chapters/batel}
-% \includepaper{chapters/blevins}
-% \includepaper{chapters/chung}
-% \includepaper{chapters/deChene}
-% \includepaper{chapters/deo}
-% \includepaper{chapters/goldstein}
-% \includepaper{chapters/hale}
-% % \includepaper{chapters/hammond} %needs to update fonts
-% \includepaper{chapters/hendrick} %needs to update fonts
-% \includepaper{chapters/horvathsiloni}
-% \includepaper{chapters/hymanInkelas}
-% \includepaper{chapters/kaisse} %prob
-% \includepaper{chapters/kavitskaya}
-% \includepaper{chapters/kiparsky}
-% \includepaper{chapters/lepicpadden}
-% \includepaper{chapters/maiden}
-% \includepaper{chapters/napoli}
-\includepaper{chapters/newmeyer}
-\includepaper{chapters/round}
-\includepaper{chapters/spencer}
-% \includepaper{chapters/stump table1
-\includepaper{chapters/stump}
-\includepaper{chapters/thrainsson}
-\includepaper{chapters/timberlake}
+\part{Phonology}
+\includepaper{chapters/blevins}%10.5281/zenodo.495434
+\includepaper{chapters/kaisse}%10.5281/zenodo.495437
+\includepaper{chapters/kavitskaya}%10.5281/zenodo.495438
+\includepaper{chapters/round}%10.5281/zenodo.495439
+\includepaper{chapters/thrainsson}%10.5281/zenodo.495440
+
+\part{Morphology}
+\includepaper{chapters/batel}%10.5281/zenodo.495441
+\includepaper{chapters/deChene}%10.5281/zenodo.495442
+\includepaper{chapters/hammond}%10.5281/zenodo.495444
+\includepaper{chapters/hymanInkelas}%10.5281/zenodo.495445
+\includepaper{chapters/maiden}%10.5281/zenodo.495446
+\includepaper{chapters/yang}%10.5281/zenodo.495447
+
+
+\part{Syntax and Morphosyntax}
+\includepaper{chapters/aissen}% 10.5281/zenodo.495449
+\includepaper{chapters/chung}%10.5281/zenodo.495450
+\includepaper{chapters/hale}%10.5281/zenodo.495451
+\includepaper{chapters/kiparsky}%10.5281/zenodo.495452
+\includepaper{chapters/deo}%10.5281/zenodo.495453
+\includepaper{chapters/hendrick}%10.5281/zenodo.495454
+\includepaper{chapters/spencer}%%10.5281/zenodo.495456
+\includepaper{chapters/stump}%10.5281/zenodo.495457
 
  
+\part{Language and Linguistic Theory}
+\includepaper{chapters/aronoff} %10.5281/zenodo.495459
+\includepaper{chapters/goldstein}%10.5281/zenodo.495460
+\includepaper{chapters/horvathsiloni}%10.5281/zenodo.495462
+\includepaper{chapters/lepicpadden}%10.5281/zenodo.495463
+\includepaper{chapters/napoli}%10.5281/zenodo.495464
+ \includepaper{chapters/newmeyer}%10.5281/zenodo.495465
+\includepaper{chapters/timberlake}%10.5281/zenodo.495466
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%                                              %%%
-%%%             Backmatter                       %%%
-%%%                                              %%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% There is normally no need to change the backmatter section
-\input{backmatter}
+\sloppy
+\input{backmatter} %%restore
 
 \end{document} 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%                                              %%%
-%%%                  END                         %%%
-%%%                                              %%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% you can create your book by running
-% xelatex main
-%
-% you can also try a simple 
-% make
-% on the commandline
+ 

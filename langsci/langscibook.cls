@@ -745,7 +745,7 @@
 \fi
 
 \iflsNewtxmath		% some users have problems when installing newtxmath
-% 	\usepackage[libertine]{newtxmath}
+	\usepackage[libertine]{newtxmath}
 
 	%% following http://tex.stackexchange.com/questions/297328/xelatex-does-not-load-newtxmath-with-linuxlibertine-sometimes
 	%% due to a bug in XeTeX; unfortunately this is NOT extensively tested!
@@ -1103,6 +1103,8 @@ Proofreading:
 Open reviewing:
 \@openreviewer \\
 \fi
+Editors: Claire Bowern, Laurence Horn, and Raffaella Zanuttini,
+ in collaboration with Ryan Bennett, Bob Frank, Maria Piñango, Jason Shaw, and Jim Wood\\
 Fonts: Linux Libertine, Arimo, DejaVu Sans Mono\lsAdditionalFontsImprint\\
 Typesetting software: \XeLaTeX
 

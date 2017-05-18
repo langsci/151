@@ -47,12 +47,12 @@
 
 % Kavitskaya:
 \newcommand{\assoc}[2]{\draw (#1.south) -- (#2.north);}
-\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+% \newcolumntype{L}{>{\raggedright\arraybackslash}X}
 
 % Lepic & Padden:
 \newcommand{\fitpic}[1]{\resizebox{\hsize}{!}{\includegraphics{#1}}} % from http://tex.stackexchange.com/a/148965/42880
 \newcommand{\signpic}[1]{\includegraphics[width=1.36in]{#1}}
-\newcolumntype{C}{>{\centering\arraybackslash}X}
+% \newcolumntype{C}{>{\centering\arraybackslash}X}
 
 % Spencer:
 
@@ -150,8 +150,8 @@
 
 
  \newcommand{\hand}{\ding{43}}
-% \newcommand{\rot}[1]{\begin{rotate}{90}#1\end{rotate}} %shortcut for angled text%  
-% \newcommand{\rotcon}[1]{\raisebox{-5ex}{\hspace*{1ex}\rot{\hspace*{1ex}#1}}}
+\newcommand{\rot}[1]{\begin{rotate}{90}#1\end{rotate}} %shortcut for angled text%  
+\newcommand{\rotcon}[1]{\raisebox{-5ex}{\hspace*{1ex}\rot{\hspace*{1ex}#1}}}
 
 %\input{localpackages.tex}
 \usepackage{arydshln}
@@ -160,3 +160,8 @@
 %\input{localcommands.tex}
 \newcommand{\tworow}[1]{\multirow{2}{*}{#1}}
 
+
+
+\newenvironment{indentquote}{\list{}{\rightmargin0pt\leftmargin7mm} 
+\item\relax}
+{\endlist}
